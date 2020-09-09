@@ -1,20 +1,32 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import AppContext from 'utils/AppContext';
+
+import { IPoem } from 'types';
+
+import { fetchPoem } from 'utils/fetchPoem';
 
 const Poem = () => {
   const { appState, appDispatch } = useContext(AppContext);
+  const [currentPoem, setCurrentPoem] = useState<IPoem[] | undefined>();
 
-  // Example of how we could use Dispatch to change a Users name. 'targetUser' would probably be removed
-  // And always have targetUser as 'CurrentUser'
-  const handleClick = (e: any) => {
-    appDispatch({ type: 'setName', targetUser: 'Sverre', payload: 'Henrik' });
+  const getPoem = async () => {
+    if (appState.currentUser) {
+      const poemResponse = await fetchPoem(appState.currentUser.poemTitle);
+      console.log(poemResponse);
+      setCurrentPoem(poemResponse as IPoem[]);
+    }
+  };
+
+  const RenderLines = () => {
+    return <p>{currentPoem ? currentPoem[0].lines[2] : null}</p>;
   };
 
   return (
     <div>
-      <h1>Halla bro</h1>
-      <p>{appState.users[0].name}</p>
-      <button onClick={handleClick}>Klikk</button>
+      <p>{currentPoem ? currentPoem[0].title : null}</p>
+      <p>{currentPoem ? currentPoem[0].author : null}</p>
+      <RenderLines />
+      <button onClick={getPoem}>Get poem</button>
     </div>
   );
 };
