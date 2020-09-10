@@ -1,10 +1,13 @@
+import { ReactInstance } from "react";
+
 // Put created types in this file
 export type Gender = 'male' | 'female';
 
 export interface User {
   name: string;
   song: string;
-  imageUrl: string;
+  picture: React.FunctionComponent;
+  animation: React.FunctionComponent;
   gender: Gender;
   age: number;
   liked: boolean;
