@@ -9,13 +9,15 @@ import { ReactComponent as Woman1 } from '../components/SVG/woman1.svg';
 import { ReactComponent as Woman2 } from '../components/SVG/woman2.svg';
 import { ReactComponent as Woman3 } from '../components/SVG/woman3.svg';
 import { ReactComponent as Woman4 } from '../components/SVG/woman4.svg';
+
 import { ReactComponent as Cloud } from '../components/SVG/cloud.svg';
+import { ReactComponent as Stars } from '../components/SVG/stars.svg';
 
 const user1: User = {
   name: 'Toby',
   song: 'Bitches and hoes',
   picture: Man1,
-  animation: Cloud,
+  animation: Stars,
   gender: 'male',
   age: 21,
   liked: false,
@@ -26,7 +28,7 @@ const user2: User = {
   name: 'Thomas',
   song: 'Perfect Gentleman',
   picture: Man2,
-  animation: Cloud,
+  animation: Stars,
   gender: 'male',
   age: 23,
   liked: false,
@@ -37,7 +39,7 @@ const user3: User = {
   name: 'Albert',
   song: 'Sunday Best',
   picture: Man3,
-  animation: Cloud,
+  animation: Stars,
   gender: 'male',
   age: 22,
   liked: false,
