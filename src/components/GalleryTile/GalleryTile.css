@@ -1,0 +1,38 @@
+.container{
+  display: flex;                       /* establish flex container */
+  flex-wrap: wrap;                     /* enable flex items to wrap */
+  justify-content: space-around;
+}
+
+.insideContainer {
+  position: relative;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  display: grid;
+  flex: 0 0 32%;                       /* don't grow, don't shrink, width */
+  margin-bottom: 5px;
+}
+
+.svg {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+#person {
+  z-index: 1;
+  width: 80%;
+  margin: auto;
+}
+
+#cloud {
+  z-index: 0;
+	position:relative;
+	top: calc(5%);
+	animation: move 5s infinite alternate;
+}
+
+@keyframes move {
+	from {transform: translateX(2%)}
+	to {transform: translateX(60%)}
+}
+
