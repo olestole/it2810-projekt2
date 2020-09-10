@@ -1,10 +1,11 @@
 import React from 'react';
-import { Poem } from './Profile';
+import Heading from './Heading/Header';
+import './main.css';
 
 function App() {
   return (
     <div className="App">
-      <Poem />
+      <Heading />
     </div>
   );
 }
