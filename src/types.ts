@@ -8,8 +8,15 @@ export interface User {
   gender: Gender;
   age: number;
   liked: boolean;
+  poemTitle: string;
 }
 
 export interface UserCollection {
   users: User[];
+}
+
+export interface IPoem {
+  title: string;
+  author: string;
+  lines: string[];
 }

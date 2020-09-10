@@ -3,9 +3,12 @@ import { User } from 'types';
 
 export type AppState = {
   users: User[];
+  currentUser: User | null;
 };
 
-export type AppAction = { type: 'setName'; targetUser: string; payload: string };
+export type AppAction =
+  | { type: 'setName'; targetUser: string; payload: string }
+  | { type: 'setCurrentUser'; payload: User | null };
 
 const sverre: User = {
   name: 'Sverre',
@@ -14,10 +17,12 @@ const sverre: User = {
   gender: 'male',
   age: 23,
   liked: false,
+  poemTitle: 'Now I knew I lost her --',
 };
 
 export const initialAppState: AppState = {
   users: [sverre],
+  currentUser: null,
 };
 
 export interface AppContextType {
