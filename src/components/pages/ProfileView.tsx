@@ -8,6 +8,7 @@ const ProfileView = () => {
   return (
     <div>
       <h1>ProfileView</h1>
+      <h2>{appState.currentUser?.name}</h2>
       <Poem />
     </div>
   );
