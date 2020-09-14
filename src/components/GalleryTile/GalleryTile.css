@@ -5,7 +5,20 @@
   border-style: solid;
   display: grid;
   flex: 0 0 32%;                       /* don't grow, don't shrink, width */
-  margin-bottom: 5px;
+  margin-bottom: 1%;
+  margin-top: 1%;
+}
+
+@media only screen and (max-width: 640px) {
+  .insideContainer {
+    flex: 0 0 49%;  
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .insideContainer {
+    flex: 0 0 100%;  
+  }
 }
 
 .svg {
@@ -31,7 +44,7 @@
 
 #cloud {
   z-index: 0;
-	position:relative;
+	position: relative;
 	top: calc(5%);
 	animation: move 5s infinite alternate;
 }
@@ -41,3 +54,35 @@
 	to {transform: translateX(60%)}
 }
 
+#stars {
+  z-index: 0;
+	position: relative;
+  top: calc(5%);
+  animation: twinkle 3s ease infinite;
+}
+
+@keyframes twinkle {
+  0%  {opacity: 0}
+  100%  {opacity: 1}
+}
+
+#sun{
+  position: relative;
+  stroke-width:20;
+  stroke-dasharray:6;
+  stroke-dashoffset:6;
+  transform-origin: 20% 20%;
+  animation: spin 50s linear infinite,sun-glow 3s 0s linear infinite; 
+}
+/*https://codepen.io/Benedikte/pen/bIuGr*/
+@keyframes sun-glow { 
+	0% { fill: #f1c40f; stroke:#f1c40f;}
+	50% { fill: #e67e22; stroke:#e67e22;}
+	100% { fill: #f1c40f; stroke:#f1c40f;}
+}
+
+@keyframes spin{
+	100% {
+		transform: rotate(360deg);
+	}
+}
