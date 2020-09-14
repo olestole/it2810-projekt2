@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import AppContext from 'utils/AppContext';
 import './profile.css';
+import Refresh from './refresh.png';
 
 import { IPoem } from 'types';
 
@@ -38,9 +39,11 @@ const Poem = () => {
   return (
     <div id="poemContainer">
       {RenderLinesString()}
-      <button onClick={getPoem}>Get poem</button>
+      <img src={Refresh} onClick={getPoem}></img>
     </div>
   );
 };
 
 export default Poem;
+
+/*<button onClick={getPoem}>Get poem</button>*/
