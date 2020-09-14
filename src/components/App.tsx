@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import AppContext from 'utils/AppContext';
 
-import ProfileView from './pages/ProfileView';
-import GalleryView from './pages/GalleryView';
+import ProfileView from 'pages/ProfileView';
+import GalleryView from 'pages/GalleryView';
 
 const App = () => {
   const { appState, appDispatch } = useContext(AppContext);
