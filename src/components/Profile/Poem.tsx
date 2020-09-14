@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import AppContext from 'utils/AppContext';
+import './profile.css';
 
 import { IPoem } from 'types';
 
@@ -17,15 +18,26 @@ const Poem = () => {
     }
   };
 
-  const RenderLines = () => {
-    return <p>{currentPoem ? currentPoem[0].lines[2] : null}</p>;
+  const RenderLinesString = () => {
+    let finalPoem = '';
+
+    if (currentPoem) {
+      currentPoem[0].lines.forEach((line: string, index: number) =>
+        index == 0 ? (finalPoem += '') : (finalPoem += line + '\n'),
+      );
+    }
+    return (
+      <div id="poem">
+        <h1>{currentPoem ? currentPoem[0].title : null}</h1>
+        {finalPoem}
+        <p>- {currentPoem ? currentPoem[0].author : null}</p>
+      </div>
+    );
   };
 
   return (
-    <div>
-      <p>{currentPoem ? currentPoem[0].title : null}</p>
-      <p>{currentPoem ? currentPoem[0].author : null}</p>
-      <RenderLines />
+    <div id="poemContainer">
+      {RenderLinesString()}
       <button onClick={getPoem}>Get poem</button>
     </div>
   );
