@@ -1,28 +1,35 @@
 import React, { useContext } from 'react';
-import '../GalleryTile/GalleryTile.css';
 import AppContext from 'utils/AppContext';
+import '../GalleryTile/GalleryTile.css';
 
-import { ReactComponent as Test } from '../SVG/cloud.svg';
+import { AnimationSVG } from 'components/AnimationsSVG';
+import { PeopleSVG } from 'components/AnimationsSVG';
+
 import { User } from 'types';
 
-const GalleryTile = (user: User, index: Number) => {
+interface GalleryTileProps {
+  user: User;
+}
+
+const GalleryTile = ({ user }: GalleryTileProps) => {
   const { appState, appDispatch } = useContext(AppContext);
 
-  const handleProfileClick = (u:User) => {
+  const handleProfileClick = (u: User) => {
     console.log('Pressed User');
     appDispatch({ type: 'setCurrentUser', payload: u });
   };
 
-  //Not going to use this design, just for making sure things work
   return (
-    <div className="insideContainer" onClick={_ => handleProfileClick(user) }>
-      {React.createElement("div", {key: user.song, className:"svg", id:"cloud"}, React.createElement<User>(user.animation))}
-      {React.createElement("div", {key: user.name, className:"svg", id:"person"}, React.createElement<User>(user.picture))}
+    <div className="insideContainer" onClick={(_) => handleProfileClick(user)}>
+      <div key={user.song} className="svg" id="cloud">
+        <AnimationSVG type={user.animation} />
+      </div>
+      <div key={user.name} className="svg" id="person">
+        <PeopleSVG type={user.picture} />
+      </div>
       <p id="text">{user.name}</p>
     </div>
   );
 };
-
-//{React.createElement<User>(user.picture)}
 
 export default GalleryTile;

@@ -1,4 +1,4 @@
-import { ReactInstance } from "react";
+import { ReactInstance } from 'react';
 
 // Put created types in this file
 export type Gender = 'male' | 'female';
@@ -6,8 +6,8 @@ export type Gender = 'male' | 'female';
 export interface User {
   name: string;
   song: string;
-  picture: React.FunctionComponent;
-  animation: React.FunctionComponent;
+  picture: SVGUserType;
+  animation: AnimationType;
   gender: Gender;
   age: number;
   liked: boolean;
@@ -23,3 +23,6 @@ export interface IPoem {
   author: string;
   lines: string[];
 }
+
+export type AnimationType = 'cloud' | 'stars' | 'heart';
+export type SVGUserType = 'man1' | 'man2' | 'man3' | 'man4' | 'man5' | 'woman1' | 'woman2' | 'woman3' | 'woman4';

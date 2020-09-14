@@ -1,9 +1,11 @@
 import React, { useContext } from 'react';
 import AppContext from 'utils/AppContext';
 import Heading from './Heading/Header';
+
+import ProfileView from 'pages/ProfileView';
+import GalleryView from 'pages/GalleryView';
+
 import './main.css';
-import ProfileView from './pages/ProfileView';
-import GalleryView from './pages/GalleryView';
 
 const App = () => {
   const { appState, appDispatch } = useContext(AppContext);
