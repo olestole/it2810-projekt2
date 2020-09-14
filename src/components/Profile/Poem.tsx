@@ -23,9 +23,9 @@ const Poem = () => {
 
   return (
     <div>
-      <p>{currentPoem ? currentPoem[0].title : null}</p>
-      <p>{currentPoem ? currentPoem[0].author : null}</p>
+      <h1>{currentPoem ? currentPoem[0].title : null}</h1>
       <RenderLines />
+      <p>- {currentPoem ? currentPoem[0].author : null}</p>
       <button onClick={getPoem}>Get poem</button>
     </div>
   );
