@@ -50,8 +50,12 @@
 }
 
 @keyframes move {
-	from {transform: translateX(2%)}
-	to {transform: translateX(60%)}
+  0% {
+    transform: translate(2%,0)
+  }
+  100% {
+    transform: translate(60%,0)
+    }
 }
 
 #stars {
