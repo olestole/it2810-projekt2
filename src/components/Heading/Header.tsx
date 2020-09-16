@@ -1,7 +1,8 @@
 import React from 'react';
-import './heading.css';
-import Logo from './logo.png';
-import darkMode from './darkmode.png';
+import Logo from 'assets/logo.png';
+import darkMode from 'assets/darkmode.png';
+
+import './header.css';
 
 function handleThemeClick() {
   alert('Function fired');
