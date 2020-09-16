@@ -26,11 +26,4 @@ const GalleryView = () => {
   );
 };
 
-// {React.createElement("div", {className:"container", onClick:{handleProfileClick}}, appState.users.map((e) => {return React.createElement(GalleryTile, e)}))}
-
-/*
-<div className="container" onClick={handleProfileClick}>
-{appState.users.map((e) => {return React.createElement(GalleryTile, e)})}
-</div>
-*/
 export default GalleryView;
