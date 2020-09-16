@@ -1,3 +1,4 @@
+import userEvent from '@testing-library/user-event';
 import { ReactInstance } from 'react';
 
 // Put created types in this file
@@ -24,5 +25,10 @@ export interface IPoem {
   lines: string[];
 }
 
+export type FilterType = Gender | AnimationType;
+
+export type ProfileFilter = (user: User) => boolean;
+
 export type AnimationType = 'cloud' | 'stars' | 'heart' | 'sun';
+
 export type SVGUserType = 'man1' | 'man2' | 'man3' | 'man4' | 'man5' | 'woman1' | 'woman2' | 'woman3' | 'woman4';

@@ -1,16 +1,19 @@
 import React from 'react';
-import { User } from 'types';
+import { FilterType, ProfileFilter, User } from 'types';
 
 import { initialUsers } from './UserInitialization';
 
 export type AppState = {
   users: User[];
   currentUser: User | null;
+  filter?: ProfileFilter[];
 };
 
 export type AppAction =
   | { type: 'setName'; targetUser: string; payload: string }
-  | { type: 'setCurrentUser'; payload: User | null };
+  | { type: 'setCurrentUser'; payload: User | null }
+  | { type: 'setFilter'; payload: FilterType }
+  | { type: 'removeFilter'; payload: FilterType };
 
 export const initialAppState: AppState = {
   users: initialUsers,
