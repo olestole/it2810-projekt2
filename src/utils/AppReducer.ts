@@ -33,7 +33,6 @@ const reducer: appReducer = (state: AppState, action: AppAction): AppState => {
         ...state,
         filter: removeFilter(action.payload, state),
       };
-
     default:
       return state;
   }

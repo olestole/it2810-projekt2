@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import AppContext from 'utils/AppContext';
 import { GalleryTile } from 'components/GalleryTile';
 import { User } from 'types';
-import { Filter } from 'components/Filter';
+import { Filter, generateFilters } from 'components/Filter';
 import '../pages/GalleryView.css';
 
 const GalleryView = () => {
@@ -13,7 +13,7 @@ const GalleryView = () => {
     // If there are filters in appState --> Apply them before mapping the users
     let filteredProfiles = appState.users;
     if (appState.filter) {
-      filteredProfiles = profiles.filter((user: User) => appState.filter?.every((f) => f(user)));
+      filteredProfiles = profiles.filter((user: User) => generateFilters(appState.filter!).every((f: any) => f(user)));
     }
     return filteredProfiles.map((user: User, index: number) => <GalleryTile user={user} key={index} />);
   };

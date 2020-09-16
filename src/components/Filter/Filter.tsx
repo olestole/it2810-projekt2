@@ -10,8 +10,6 @@ const Filter = () => {
   const possibleFilters: FilterType[] = ['cloud', 'stars', 'heart', 'sun', 'male', 'female'];
 
   const handleFilter = (e: any, filter: FilterType) => {
-    console.log(e.target.checked);
-
     e.target.checked
       ? appDispatch({ type: 'setFilter', payload: filter })
       : appDispatch({ type: 'removeFilter', payload: filter });
@@ -21,10 +19,17 @@ const Filter = () => {
     <div className="filterBoxCollection">
       {possibleFilters.map((filter: FilterType, index: number) => (
         <div key={index} className="filterBox">
-          <label className="checkBoxText" htmlFor="checkBox">
-            {filter}
-          </label>
-          <input className="checkBox" type="checkbox" onClick={(e) => handleFilter(e, filter)}></input>
+          <p className="checkBoxText">{filter}</p>
+          <input
+            checked={
+              !appState.filter
+                ? false
+                : appState.filter.findIndex((appFilter: FilterType) => appFilter == filter) !== -1
+            }
+            className="checkBox"
+            type="checkbox"
+            onClick={(e) => handleFilter(e, filter)}
+          ></input>
         </div>
       ))}
     </div>
@@ -33,37 +38,37 @@ const Filter = () => {
 
 export const addFilter = (payload: FilterType, state: AppState) => {
   let newFilter;
-  let newPredicate;
-  if (['male', 'female'].includes(payload)) {
-    newPredicate = (user: User) => user.gender === payload;
-  } else {
-    newPredicate = (user: User) => user.animation === payload;
-  }
 
   if (state.filter) {
-    newFilter = [...state.filter, newPredicate];
+    newFilter = [...state.filter, payload];
   } else {
-    newFilter = [newPredicate];
+    newFilter = [payload];
   }
   return newFilter;
 };
 
 export const removeFilter = (payload: FilterType, state: AppState) => {
   const newFilter = [...state.filter!];
-  let newPredicate: ProfileFilter;
 
-  if (['male', 'female'].includes(payload)) {
-    newPredicate = (user: User) => user.gender === payload;
-  } else {
-    newPredicate = (user: User) => user.animation === payload;
-  }
-
-  if (state.filter) {
-    const oldFilterIndex = state.filter.indexOf(newPredicate);
-    console.log(state.filter[oldFilterIndex]);
-    newFilter.splice(oldFilterIndex, 1);
-  }
+  const oldFilterIndex = state.filter!.indexOf(payload);
+  newFilter.splice(oldFilterIndex, 1);
   return newFilter;
+};
+
+export const generateFilters = (filters: FilterType[]): ProfileFilter[] => {
+  const filterCollection = [];
+
+  if (filters) {
+    for (const filter of filters) {
+      if (['male', 'female'].includes(filter)) {
+        filterCollection.push((user: User) => user.gender === filter);
+      } else {
+        filterCollection.push((user: User) => user.animation === filter);
+      }
+    }
+  }
+
+  return filterCollection;
 };
 
 export default Filter;

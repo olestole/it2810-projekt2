@@ -1,3 +1,3 @@
-import Filter, { addFilter, removeFilter } from './Filter';
+import Filter, { addFilter, removeFilter, generateFilters } from './Filter';
 
-export { Filter, addFilter, removeFilter };
+export { Filter, addFilter, removeFilter, generateFilters };

@@ -1,6 +1,3 @@
-import userEvent from '@testing-library/user-event';
-import { ReactInstance } from 'react';
-
 // Put created types in this file
 export type Gender = 'male' | 'female';
 

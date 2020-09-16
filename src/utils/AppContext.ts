@@ -1,12 +1,12 @@
 import React from 'react';
-import { FilterType, ProfileFilter, User } from 'types';
+import { FilterType, User } from 'types';
 
 import { initialUsers } from './UserInitialization';
 
 export type AppState = {
   users: User[];
   currentUser: User | null;
-  filter?: ProfileFilter[];
+  filter?: FilterType[];
 };
 
 export type AppAction =

@@ -15,7 +15,6 @@ const GalleryTile = ({ user }: GalleryTileProps) => {
   const { appState, appDispatch } = useContext(AppContext);
 
   const handleProfileClick = (u: User) => {
-    console.log('Pressed User');
     appDispatch({ type: 'setCurrentUser', payload: u });
   };
 
