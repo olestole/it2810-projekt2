@@ -1,92 +1,113 @@
-.insideContainer {
+:root {
+  --borderRadius: 5px;
+  --box-shadow: 0px 0px 10px 5px #00000020;
+  --box-shadow-glow: 0px 0px 10px 2px #ff525240;
+
+  /* Colors */
+  --background: #131313;
+  --container: #1f1f1f;
+  --orange: #f8bd7f;
+  --buttonGrey: #333;
+  --button-notification: #3f3f3f;
+}
+
+.svgContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+
+  box-shadow: var(--box-shadow);
+  border-radius: var(--borderRadius);
+}
+
+.svgPeople {
   position: relative;
-  border-color: black;
-  border-width: 1px;
-  border-style: solid;
-  display: grid;
-  flex: 0 0 32%;                       /* don't grow, don't shrink, width */
-  margin-bottom: 1%;
-  margin-top: 1%;
+  z-index: 1;
+  width: 90%;
+}
+
+.svgAnimation {
+  position: relative;
+  margin: -25% 0 0 0;
+
+  z-index: 0;
+  width: 50%;
+  top: 25%;
+}
+
+.svgText {
+  position: relative;
+  bottom: 10%;
+  margin: 0 0 -10% 0;
+  z-index: 2;
+  font-size: 4em;
+  font-weight: 500;
 }
 
 @media only screen and (max-width: 640px) {
-  .insideContainer {
-    flex: 0 0 49%;  
-  }
 }
 
 @media only screen and (max-width: 375px) {
-  .insideContainer {
-    flex: 0 0 100%;  
-  }
-}
-
-.svg {
-  grid-area: 1 / 1 / 2 / 2;
-}
-
-#text {
-  position: absolute;
-  margin: auto;
-  z-index: 2;
-  bottom: 0%;
-  left: 0%;
-  text-align: center;
-  width: 100%;
-  font-size: 5vw;
-}
-
-#person {
-  z-index: 1;
-  width: 80%;
-  margin: auto;
 }
 
 #cloud {
-  z-index: 0;
-	position: relative;
-	top: calc(5%);
-	animation: move 5s infinite alternate;
+  animation: move 5s infinite alternate;
+}
+
+#stars {
+  align-self: flex-end;
+  animation: twinkle 3s ease infinite;
+}
+
+#sun {
+  left: 20px;
+  align-self: flex-start;
+  stroke-width: 20;
+  stroke-dasharray: 6;
+  stroke-dashoffset: 6;
+  transform-origin: 50% 50%;
+  animation: spin 50s linear infinite, sun-glow 3s 0s linear infinite;
+}
+
+/*https://codepen.io/Benedikte/pen/bIuGr*/
+@keyframes sun-glow {
+  0% {
+    fill: #f1c40f;
+    stroke: #f1c40f;
+  }
+  50% {
+    fill: #e67e22;
+    stroke: #e67e22;
+  }
+  100% {
+    fill: #f1c40f;
+    stroke: #f1c40f;
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes move {
   0% {
-    transform: translate(2%,0)
+    transform: scale(1);
+    /* transform: translate(0%, 0%); */
   }
   100% {
-    transform: translate(60%,0)
-    }
-}
-
-#stars {
-  z-index: 0;
-	position: relative;
-  top: calc(5%);
-  animation: twinkle 3s ease infinite;
-}
-
-@keyframes twinkle {
-  0%  {opacity: 0}
-  100%  {opacity: 1}
-}
-
-#sun{
-  position: relative;
-  stroke-width:20;
-  stroke-dasharray:6;
-  stroke-dashoffset:6;
-  transform-origin: 20% 20%;
-  animation: spin 50s linear infinite,sun-glow 3s 0s linear infinite; 
-}
-/*https://codepen.io/Benedikte/pen/bIuGr*/
-@keyframes sun-glow { 
-	0% { fill: #f1c40f; stroke:#f1c40f;}
-	50% { fill: #e67e22; stroke:#e67e22;}
-	100% { fill: #f1c40f; stroke:#f1c40f;}
-}
-
-@keyframes spin{
-	100% {
-		transform: rotate(360deg);
-	}
+    transform: scale(1.2);
+    /* transform: translate(50%, 20%); */
+  }
 }

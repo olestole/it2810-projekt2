@@ -15,9 +15,7 @@ const GalleryView = () => {
   return (
     <div>
       <h1>GalleryView</h1>
-      <button onClick={handleProfileClick}>Profile 1</button>
-      <button onClick={() => console.log(appState.users[0].picture)}>console</button>
-      <div className="container">
+      <div className="gridContainer">
         {appState.users.map((user: User, index: number) => (
           <GalleryTile user={user} key={index} />
         ))}
