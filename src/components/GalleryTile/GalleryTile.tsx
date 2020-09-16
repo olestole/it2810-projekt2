@@ -21,7 +21,7 @@ const GalleryTile = ({ user }: GalleryTileProps) => {
 
   return (
     <div className="insideContainer" onClick={(_) => handleProfileClick(user)}>
-      <div key={user.song} className="svg" id="cloud">
+      <div key={user.song} className="svg" id={user.animation}>
         <AnimationSVG type={user.animation} />
       </div>
       <div key={user.name} className="svg" id="person">
