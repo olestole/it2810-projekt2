@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import AppContext from 'utils/AppContext';
-import { Poem } from 'components/Profile';
+import AppContext from '../utils/AppContext';
+import { Poem } from '../components/Profile';
 
 const ProfileView = () => {
   const { appState, appDispatch } = useContext(AppContext);

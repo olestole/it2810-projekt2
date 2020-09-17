@@ -1,9 +1,9 @@
 import React, { useContext, useState } from 'react';
-import AppContext from 'utils/AppContext';
+import AppContext from '../../utils/AppContext';
 
 import { IPoem } from 'types';
 
-import { fetchPoem } from 'utils/fetchPoem';
+import { fetchPoem } from '../../utils/fetchPoem';
 
 const Poem = () => {
   const { appState, appDispatch } = useContext(AppContext);

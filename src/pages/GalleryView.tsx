@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import AppContext from 'utils/AppContext';
-import { GalleryTile } from 'components/GalleryTile';
+import AppContext from '../utils/AppContext';
+import { GalleryTile } from '../components/GalleryTile';
 import { User } from 'types';
 import '../pages/GalleryView.css';
 

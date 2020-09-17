@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import AppContext from 'utils/AppContext';
+import AppContext from '../utils/AppContext';
 import Heading from './Heading/Header';
 
-import ProfileView from 'pages/ProfileView';
-import GalleryView from 'pages/GalleryView';
+import ProfileView from '../pages/ProfileView';
+import GalleryView from '../pages/GalleryView';
 
 import './main.css';
 
