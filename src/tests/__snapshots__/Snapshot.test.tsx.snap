@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component matches the snapshot 1`] = `
+<div>
+  <header
+    className="header"
+  >
+    <div
+      className="logo"
+    >
+      <img
+        onClick={[Function]}
+        src={Object {}}
+      />
+    </div>
+    <div
+      className="darkmode"
+      onClick={[Function]}
+    >
+      <img
+        onClick={[Function]}
+        src={Object {}}
+      />
+    </div>
+  </header>
+</div>
+`;
+
+exports[`Whole page matches the snapshot 1`] = `null`;
