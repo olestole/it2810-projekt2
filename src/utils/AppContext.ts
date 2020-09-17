@@ -17,7 +17,7 @@ const sverre: User = {
   gender: 'male',
   age: 23,
   liked: false,
-  poemTitle: 'Now I knew I lost her --',
+  favAuthor: 'William Shakespear',
 };
 
 export const initialAppState: AppState = {

@@ -1,9 +1,11 @@
 #poemContainer {
-  width: 350px;
-  height: 300px;
+  width: auto;
+  height: auto;
   padding: 20px;
   background-color: grey;
   position: relative;
+  max-width: 400px;
+  max-height: 375px;
 }
 
 #poemContainer img {

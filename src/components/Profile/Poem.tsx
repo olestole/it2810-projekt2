@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import AppContext from 'utils/AppContext';
 import './profile.css';
 import Refresh from './refresh.png';
@@ -10,40 +10,47 @@ import { fetchPoem } from 'utils/fetchPoem';
 const Poem = () => {
   const { appState, appDispatch } = useContext(AppContext);
   const [currentPoem, setCurrentPoem] = useState<IPoem[] | undefined>();
+  let randNumber = 1;
 
   const getPoem = async () => {
     if (appState.currentUser) {
-      const poemResponse = await fetchPoem(appState.currentUser.poemTitle);
-      console.log(poemResponse);
+      const poemResponse = await fetchPoem(appState.currentUser.favAuthor);
       setCurrentPoem(poemResponse as IPoem[]);
     }
   };
+
+  useEffect(() => {
+    getPoem();
+  }, [randNumber]);
 
   const RenderLinesString = () => {
     let finalPoem = '';
 
     if (currentPoem) {
-      currentPoem[0].lines.forEach((line: string, index: number) =>
-        index == 0 ? (finalPoem += '') : (finalPoem += line + '\n'),
-      );
+      randNumber = Math.floor(Math.random() * currentPoem.length);
+      if (currentPoem[randNumber].linecount < 30) {
+        currentPoem[randNumber].lines.forEach((line: string, index: number) =>
+          index == 0 ? (finalPoem += '') : (finalPoem += line + '\n'),
+        );
+      } else {
+        getPoem();
+      }
     }
     return (
       <div id="poem">
-        <h1>{currentPoem ? currentPoem[0].title : null}</h1>
+        <h1>{currentPoem ? currentPoem[randNumber].title : null}</h1>
         {finalPoem}
-        <p>- {currentPoem ? currentPoem[0].author : null}</p>
+        <p>- {currentPoem ? currentPoem[randNumber].author : null}</p>
       </div>
     );
   };
 
   return (
     <div id="poemContainer">
-      {RenderLinesString()}
       <img src={Refresh} onClick={getPoem}></img>
+      {RenderLinesString()}
     </div>
   );
 };
 
 export default Poem;
-
-/*<button onClick={getPoem}>Get poem</button>*/
