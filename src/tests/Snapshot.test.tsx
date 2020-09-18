@@ -6,6 +6,10 @@ import * as renderer from 'react-test-renderer';
 import Header from '../components/Heading/Header';
 import AppContextProvider from '../components/AppContextProvider';
 import App from '../components/App';
+import { shallow, configure, mount } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+configure({ adapter: new Adapter() });
 
 describe('Header component', () => {
   it('matches the snapshot', () => {
@@ -17,16 +21,13 @@ describe('Header component', () => {
 
 describe('Whole page', () => {
   it('matches the snapshot', () => {
-    const tree = renderer
-      .create(
-        <AppContextProvider></AppContextProvider>,
-        /*
-        <AppContextProvider>
-          <App />
-        </AppContextProvider>,
-        */
-      )
-      .toJSON();
-    expect(tree).toMatchSnapshot();
+    const shallowWrapper = shallow(
+      <AppContextProvider>
+        <App />
+      </AppContextProvider>,
+    );
+    const app = shallowWrapper.find('App');
+    expect(app.length).toEqual(1);
+    expect(app).toMatchSnapshot();
   });
 });
