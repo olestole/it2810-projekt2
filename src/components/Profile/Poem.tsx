@@ -20,7 +20,9 @@ const Poem = () => {
   };
 
   useEffect(() => {
-    getPoem();
+    if (appState.currentUser) {
+      getPoem();
+    }
   }, [randNumber]);
 
   const RenderLinesString = () => {
