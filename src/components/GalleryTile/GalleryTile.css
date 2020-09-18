@@ -1,38 +1,119 @@
-.container{
-  display: flex;                       /* establish flex container */
-  flex-wrap: wrap;                     /* enable flex items to wrap */
-  justify-content: space-around;
+:root {
+  --borderRadius: 8px;
+  --box-shadow: 0px 0px 10px 5px #00000020;
+  --box-shadow-glow: 0px 0px 10px 2px #ff525240;
+
+  /* Colors */
+  --background: #131313;
+  --container: #1f1f1f;
+  --orange: #f8bd7f;
+  --buttonGrey: #333;
+  --button-notification: #3f3f3f;
 }
 
-.insideContainer {
+.svgContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+
+  transition: 0.1s;
+
+  box-shadow: var(--box-shadow);
+  border-radius: var(--borderRadius);
+}
+
+.svgContainer:hover {
+  transform: scale(1.02);
+}
+
+.svgPeople {
   position: relative;
-  border-color: black;
-  border-width: 1px;
-  border-style: solid;
-  display: grid;
-  flex: 0 0 32%;                       /* don't grow, don't shrink, width */
-  margin-bottom: 5px;
-}
-
-.svg {
-  grid-area: 1 / 1 / 2 / 2;
-}
-
-#person {
   z-index: 1;
-  width: 80%;
-  margin: auto;
+  width: 90%;
+}
+
+.svgAnimation {
+  position: relative;
+  margin: -25% 0 0 0;
+
+  z-index: 0;
+  width: 50%;
+  top: 25%;
+}
+
+.svgText {
+  position: relative;
+  bottom: 10%;
+  margin: 0 0 -10% 0;
+  z-index: 2;
+  font-size: 4em;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 640px) {
+}
+
+@media only screen and (max-width: 375px) {
 }
 
 #cloud {
-  z-index: 0;
-	position:relative;
-	top: calc(5%);
-	animation: move 5s infinite alternate;
+  animation: move 5s infinite alternate;
+}
+
+#stars {
+  align-self: flex-end;
+  animation: twinkle 3s ease infinite;
+}
+
+#sun {
+  left: 20px;
+  align-self: flex-start;
+  stroke-width: 20;
+  stroke-dasharray: 6;
+  stroke-dashoffset: 6;
+  transform-origin: 50% 50%;
+  animation: spin 50s linear infinite, sun-glow 3s 0s linear infinite;
+}
+
+/*https://codepen.io/Benedikte/pen/bIuGr*/
+@keyframes sun-glow {
+  0% {
+    fill: #f1c40f;
+    stroke: #f1c40f;
+  }
+  50% {
+    fill: #e67e22;
+    stroke: #e67e22;
+  }
+  100% {
+    fill: #f1c40f;
+    stroke: #f1c40f;
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes move {
-	from {transform: translateX(2%)}
-	to {transform: translateX(60%)}
+  0% {
+    transform: scale(1);
+    /* transform: translate(0%, 0%); */
+  }
+  100% {
+    transform: scale(1.2);
+    /* transform: translate(50%, 20%); */
+  }
 }
-

@@ -1,19 +1,25 @@
 import React from 'react';
-import { User } from 'types';
+import { FilterType, User } from 'types';
+
+import { initialUsers } from './UserInitialization';
 
 export type AppState = {
   users: User[];
   currentUser: User | null;
+  filter?: FilterType[];
 };
 
 export type AppAction =
   | { type: 'setName'; targetUser: string; payload: string }
-  | { type: 'setCurrentUser'; payload: User | null };
+  | { type: 'setCurrentUser'; payload: User | null }
+  | { type: 'setFilter'; payload: FilterType }
+  | { type: 'removeFilter'; payload: FilterType };
 
 const sverre: User = {
   name: 'Sverre',
   song: 'Hmmm',
-  imageUrl: 'www.vg.no',
+  picture: 'man1',
+  animation: 'cloud',
   gender: 'male',
   age: 23,
   liked: false,
@@ -21,7 +27,7 @@ const sverre: User = {
 };
 
 export const initialAppState: AppState = {
-  users: [sverre],
+  users: initialUsers,
   currentUser: null,
 };
 
