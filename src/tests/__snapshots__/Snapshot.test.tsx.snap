@@ -26,4 +26,249 @@ exports[`Header component matches the snapshot 1`] = `
 </div>
 `;
 
-exports[`Whole page matches the snapshot 1`] = `ShallowWrapper {}`;
+exports[`Whole page matches the snapshot 1`] = `
+<div
+  className="App"
+>
+  <div>
+    <header
+      className="header"
+    >
+      <div
+        className="logo"
+      >
+        <img
+          onClick={[Function]}
+          src={Object {}}
+        />
+      </div>
+      <div
+        className="darkmode"
+        onClick={[Function]}
+      >
+        <img
+          onClick={[Function]}
+          src={Object {}}
+        />
+      </div>
+    </header>
+  </div>
+  <div>
+    <h1>
+      GalleryView
+    </h1>
+    <button
+      onClick={[Function]}
+    >
+      Profile 1
+    </button>
+    <button
+      onClick={[Function]}
+    >
+      console
+    </button>
+    <div
+      className="container"
+    >
+      <div
+        className="insideContainer"
+        onClick={[Function]}
+      >
+        <div
+          className="svg"
+          id="stars"
+        >
+          <IconMock />
+        </div>
+        <div
+          className="svg"
+          id="person"
+        >
+          <IconMock />
+        </div>
+        <p
+          id="text"
+        >
+          Toby
+        </p>
+      </div>
+      <div
+        className="insideContainer"
+        onClick={[Function]}
+      >
+        <div
+          className="svg"
+          id="stars"
+        >
+          <IconMock />
+        </div>
+        <div
+          className="svg"
+          id="person"
+        >
+          <IconMock />
+        </div>
+        <p
+          id="text"
+        >
+          Thomas
+        </p>
+      </div>
+      <div
+        className="insideContainer"
+        onClick={[Function]}
+      >
+        <div
+          className="svg"
+          id="stars"
+        >
+          <IconMock />
+        </div>
+        <div
+          className="svg"
+          id="person"
+        >
+          <IconMock />
+        </div>
+        <p
+          id="text"
+        >
+          Albert
+        </p>
+      </div>
+      <div
+        className="insideContainer"
+        onClick={[Function]}
+      >
+        <div
+          className="svg"
+          id="cloud"
+        >
+          <IconMock />
+        </div>
+        <div
+          className="svg"
+          id="person"
+        >
+          <IconMock />
+        </div>
+        <p
+          id="text"
+        >
+          Bill
+        </p>
+      </div>
+      <div
+        className="insideContainer"
+        onClick={[Function]}
+      >
+        <div
+          className="svg"
+          id="cloud"
+        >
+          <IconMock />
+        </div>
+        <div
+          className="svg"
+          id="person"
+        >
+          <IconMock />
+        </div>
+        <p
+          id="text"
+        >
+          Harry
+        </p>
+      </div>
+      <div
+        className="insideContainer"
+        onClick={[Function]}
+      >
+        <div
+          className="svg"
+          id="cloud"
+        >
+          <IconMock />
+        </div>
+        <div
+          className="svg"
+          id="person"
+        >
+          <IconMock />
+        </div>
+        <p
+          id="text"
+        >
+          Sophie
+        </p>
+      </div>
+      <div
+        className="insideContainer"
+        onClick={[Function]}
+      >
+        <div
+          className="svg"
+          id="sun"
+        >
+          <IconMock />
+        </div>
+        <div
+          className="svg"
+          id="person"
+        >
+          <IconMock />
+        </div>
+        <p
+          id="text"
+        >
+          Astrid
+        </p>
+      </div>
+      <div
+        className="insideContainer"
+        onClick={[Function]}
+      >
+        <div
+          className="svg"
+          id="sun"
+        >
+          <IconMock />
+        </div>
+        <div
+          className="svg"
+          id="person"
+        >
+          <IconMock />
+        </div>
+        <p
+          id="text"
+        >
+          Mary
+        </p>
+      </div>
+      <div
+        className="insideContainer"
+        onClick={[Function]}
+      >
+        <div
+          className="svg"
+          id="sun"
+        >
+          <IconMock />
+        </div>
+        <div
+          className="svg"
+          id="person"
+        >
+          <IconMock />
+        </div>
+        <p
+          id="text"
+        >
+          Selina
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

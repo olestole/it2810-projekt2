@@ -6,10 +6,10 @@ import * as renderer from 'react-test-renderer';
 import Header from '../components/Heading/Header';
 import AppContextProvider from '../components/AppContextProvider';
 import App from '../components/App';
-import { shallow, configure, mount } from 'enzyme';
+//import { shallow, configure, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
-configure({ adapter: new Adapter() });
+//configure({ adapter: new Adapter() });
 
 describe('Header component', () => {
   it('matches the snapshot', () => {
@@ -21,13 +21,12 @@ describe('Header component', () => {
 
 describe('Whole page', () => {
   it('matches the snapshot', () => {
-    const shallowWrapper = shallow(
+    const shallowWrapper = renderer.create(
       <AppContextProvider>
         <App />
       </AppContextProvider>,
     );
-    const app = shallowWrapper.find('App');
-    expect(app.length).toEqual(1);
-    expect(app).toMatchSnapshot();
+
+    expect(shallowWrapper).toMatchSnapshot();
   });
 });
