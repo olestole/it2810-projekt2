@@ -15,19 +15,18 @@ const GalleryTile = ({ user }: GalleryTileProps) => {
   const { appState, appDispatch } = useContext(AppContext);
 
   const handleProfileClick = (u: User) => {
-    console.log('Pressed User');
     appDispatch({ type: 'setCurrentUser', payload: u });
   };
 
   return (
-    <div className="insideContainer" onClick={(_) => handleProfileClick(user)}>
-      <div key={user.song} className="svg" id={user.animation}>
+    <div className="svgContainer" onClick={(_) => handleProfileClick(user)}>
+      <div id={user.animation} className="svgAnimation">
         <AnimationSVG type={user.animation} />
       </div>
-      <div key={user.name} className="svg" id="person">
+      <div className="svgPeople">
         <PeopleSVG type={user.picture} />
       </div>
-      <p id="text">{user.name}</p>
+      <p className="svgText">{user.name}</p>
     </div>
   );
 };

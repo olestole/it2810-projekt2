@@ -1,27 +1,27 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import AppContext from 'utils/AppContext';
 import { GalleryTile } from 'components/GalleryTile';
 import { User } from 'types';
+import { Filter, generateFilters } from 'components/Filter';
 import '../pages/GalleryView.css';
 
 const GalleryView = () => {
   const { appState, appDispatch } = useContext(AppContext);
+  const [profiles, setProfiles] = useState<User[]>(appState.users);
 
-  const handleProfileClick = () => {
-    console.log('Pressed User');
-    appDispatch({ type: 'setCurrentUser', payload: appState.users[0] });
+  const renderProfiles = () => {
+    // If there are filters in appState --> Apply them before mapping the users
+    let filteredProfiles = appState.users;
+    if (appState.filter) {
+      filteredProfiles = profiles.filter((user: User) => generateFilters(appState.filter!).every((f: any) => f(user)));
+    }
+    return filteredProfiles.map((user: User, index: number) => <GalleryTile user={user} key={index} />);
   };
 
   return (
     <div>
-      <h1>GalleryView</h1>
-      <button onClick={handleProfileClick}>Profile 1</button>
-      <button onClick={() => console.log(appState.users[0].picture)}>console</button>
-      <div className="container">
-        {appState.users.map((user: User, index: number) => (
-          <GalleryTile user={user} key={index} />
-        ))}
-      </div>
+      <Filter />
+      <div className="gridContainer">{renderProfiles()}</div>
     </div>
   );
 };
