@@ -54,216 +54,288 @@ exports[`Whole page matches the snapshot 1`] = `
     </header>
   </div>
   <div>
-    <h1>
-      GalleryView
-    </h1>
-    <button
-      onClick={[Function]}
-    >
-      Profile 1
-    </button>
-    <button
-      onClick={[Function]}
-    >
-      console
-    </button>
     <div
-      className="container"
+      className="filterBoxCollection"
     >
       <div
-        className="insideContainer"
+        className="filterBox"
+      >
+        <p
+          className="checkBoxText"
+        >
+          cloud
+        </p>
+        <input
+          checked={false}
+          className="checkBox"
+          onClick={[Function]}
+          type="checkbox"
+        />
+      </div>
+      <div
+        className="filterBox"
+      >
+        <p
+          className="checkBoxText"
+        >
+          stars
+        </p>
+        <input
+          checked={false}
+          className="checkBox"
+          onClick={[Function]}
+          type="checkbox"
+        />
+      </div>
+      <div
+        className="filterBox"
+      >
+        <p
+          className="checkBoxText"
+        >
+          heart
+        </p>
+        <input
+          checked={false}
+          className="checkBox"
+          onClick={[Function]}
+          type="checkbox"
+        />
+      </div>
+      <div
+        className="filterBox"
+      >
+        <p
+          className="checkBoxText"
+        >
+          sun
+        </p>
+        <input
+          checked={false}
+          className="checkBox"
+          onClick={[Function]}
+          type="checkbox"
+        />
+      </div>
+      <div
+        className="filterBox"
+      >
+        <p
+          className="checkBoxText"
+        >
+          male
+        </p>
+        <input
+          checked={false}
+          className="checkBox"
+          onClick={[Function]}
+          type="checkbox"
+        />
+      </div>
+      <div
+        className="filterBox"
+      >
+        <p
+          className="checkBoxText"
+        >
+          female
+        </p>
+        <input
+          checked={false}
+          className="checkBox"
+          onClick={[Function]}
+          type="checkbox"
+        />
+      </div>
+    </div>
+    <div
+      className="gridContainer"
+    >
+      <div
+        className="svgContainer"
         onClick={[Function]}
       >
         <div
-          className="svg"
+          className="svgAnimation"
           id="stars"
         >
           <IconMock />
         </div>
         <div
-          className="svg"
-          id="person"
+          className="svgPeople"
         >
           <IconMock />
         </div>
         <p
-          id="text"
+          className="svgText"
         >
           Toby
         </p>
       </div>
       <div
-        className="insideContainer"
+        className="svgContainer"
         onClick={[Function]}
       >
         <div
-          className="svg"
+          className="svgAnimation"
           id="stars"
         >
           <IconMock />
         </div>
         <div
-          className="svg"
-          id="person"
+          className="svgPeople"
         >
           <IconMock />
         </div>
         <p
-          id="text"
+          className="svgText"
         >
           Thomas
         </p>
       </div>
       <div
-        className="insideContainer"
+        className="svgContainer"
         onClick={[Function]}
       >
         <div
-          className="svg"
+          className="svgAnimation"
           id="stars"
         >
           <IconMock />
         </div>
         <div
-          className="svg"
-          id="person"
+          className="svgPeople"
         >
           <IconMock />
         </div>
         <p
-          id="text"
+          className="svgText"
         >
           Albert
         </p>
       </div>
       <div
-        className="insideContainer"
+        className="svgContainer"
         onClick={[Function]}
       >
         <div
-          className="svg"
+          className="svgAnimation"
           id="cloud"
         >
           <IconMock />
         </div>
         <div
-          className="svg"
-          id="person"
+          className="svgPeople"
         >
           <IconMock />
         </div>
         <p
-          id="text"
+          className="svgText"
         >
           Bill
         </p>
       </div>
       <div
-        className="insideContainer"
+        className="svgContainer"
         onClick={[Function]}
       >
         <div
-          className="svg"
+          className="svgAnimation"
           id="cloud"
         >
           <IconMock />
         </div>
         <div
-          className="svg"
-          id="person"
+          className="svgPeople"
         >
           <IconMock />
         </div>
         <p
-          id="text"
+          className="svgText"
         >
           Harry
         </p>
       </div>
       <div
-        className="insideContainer"
+        className="svgContainer"
         onClick={[Function]}
       >
         <div
-          className="svg"
+          className="svgAnimation"
           id="cloud"
         >
           <IconMock />
         </div>
         <div
-          className="svg"
-          id="person"
+          className="svgPeople"
         >
           <IconMock />
         </div>
         <p
-          id="text"
+          className="svgText"
         >
           Sophie
         </p>
       </div>
       <div
-        className="insideContainer"
+        className="svgContainer"
         onClick={[Function]}
       >
         <div
-          className="svg"
+          className="svgAnimation"
           id="sun"
         >
           <IconMock />
         </div>
         <div
-          className="svg"
-          id="person"
+          className="svgPeople"
         >
           <IconMock />
         </div>
         <p
-          id="text"
+          className="svgText"
         >
           Astrid
         </p>
       </div>
       <div
-        className="insideContainer"
+        className="svgContainer"
         onClick={[Function]}
       >
         <div
-          className="svg"
+          className="svgAnimation"
           id="sun"
         >
           <IconMock />
         </div>
         <div
-          className="svg"
-          id="person"
+          className="svgPeople"
         >
           <IconMock />
         </div>
         <p
-          id="text"
+          className="svgText"
         >
           Mary
         </p>
       </div>
       <div
-        className="insideContainer"
+        className="svgContainer"
         onClick={[Function]}
       >
         <div
-          className="svg"
+          className="svgAnimation"
           id="sun"
         >
           <IconMock />
         </div>
         <div
-          className="svg"
-          id="person"
+          className="svgPeople"
         >
           <IconMock />
         </div>
         <p
-          id="text"
+          className="svgText"
         >
           Selina
         </p>
