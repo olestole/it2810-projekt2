@@ -4,7 +4,12 @@ import AppContext from 'utils/AppContext';
 import reducer from 'utils/AppReducer';
 
 const AppContextProvider = ({ children }: any) => {
-  const [appState, appDispatch] = useReducer(reducer, initialAppState);
+  let localStorageState;
+
+  if (localStorage.getItem('context')) {
+    localStorageState = JSON.parse(localStorage.getItem('context') as string);
+  }
+  const [appState, appDispatch] = useReducer(reducer, localStorageState ? localStorageState : initialAppState);
 
   return <AppContext.Provider value={{ appState, appDispatch }}>{children}</AppContext.Provider>;
 };
