@@ -1,8 +1,8 @@
-const song1 = require('components/mp3/song1.mp3');
-const song2 = require('components/mp3/song2.mp3');
-const song3 = require('components/mp3/song3.mp3');
-const song4 = require('components/mp3/song4.mp3');
-const song5 = require('components/mp3/song5.mp3');
+const song1 = require('assets/mp3/song1.mp3');
+const song2 = require('assets/mp3/song2.mp3');
+const song3 = require('assets/mp3/song3.mp3');
+const song4 = require('assets/mp3/song4.mp3');
+const song5 = require('assets/mp3/song5.mp3');
 
 //https://soundcloud.com/hanangobran/sets/reading-music
 
