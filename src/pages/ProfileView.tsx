@@ -20,7 +20,6 @@ const ProfileView = () => {
         <source src={song(appState.currentUser != null ? appState.currentUser?.song : '')} type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
-      <button onClick={playSong}>Play Song</button>
     </div>
   );
 };
