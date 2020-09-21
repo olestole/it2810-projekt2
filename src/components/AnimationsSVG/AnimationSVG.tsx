@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { ReactComponent as Cloud } from 'components/SVG/cloud.svg';
-import { ReactComponent as Stars } from 'components/SVG/stars.svg';
-import { ReactComponent as Sun } from 'components/SVG/sun.svg';
+import { ReactComponent as Cloud } from 'assets/SVG/cloud.svg';
+import { ReactComponent as Stars } from 'assets/SVG/stars.svg';
+import { ReactComponent as Sun } from 'assets/SVG/sun.svg';
 
 import { AnimationType } from 'types';
 

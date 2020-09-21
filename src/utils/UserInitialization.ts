@@ -2,7 +2,7 @@ import { User } from 'types';
 
 const user1: User = {
   name: 'Toby',
-  song: 'Bitches and hoes',
+  song: 'song5',
   picture: 'man1',
   animation: 'stars',
   gender: 'male',
@@ -13,7 +13,7 @@ const user1: User = {
 
 const user2: User = {
   name: 'Thomas',
-  song: 'Perfect Gentleman',
+  song: 'song1',
   picture: 'man2',
   animation: 'stars',
   gender: 'male',
@@ -24,7 +24,7 @@ const user2: User = {
 
 const user3: User = {
   name: 'Albert',
-  song: 'Sunday Best',
+  song: 'song2',
   picture: 'man3',
   animation: 'stars',
   gender: 'male',
@@ -35,7 +35,7 @@ const user3: User = {
 
 const user4: User = {
   name: 'Bill',
-  song: 'Ritual',
+  song: 'song2',
   picture: 'man4',
   animation: 'cloud',
   gender: 'male',
@@ -46,7 +46,7 @@ const user4: User = {
 
 const user5: User = {
   name: 'Harry',
-  song: 'Dear Boy',
+  song: 'song3',
   picture: 'man5',
   animation: 'cloud',
   gender: 'male',
@@ -57,7 +57,7 @@ const user5: User = {
 
 const user6: User = {
   name: 'Sophie',
-  song: 'Take me out',
+  song: 'song3',
   picture: 'woman1',
   animation: 'cloud',
   gender: 'female',
@@ -68,7 +68,7 @@ const user6: User = {
 
 const user7: User = {
   name: 'Astrid',
-  song: 'Be as you are',
+  song: 'song4',
   picture: 'woman2',
   animation: 'sun',
   gender: 'female',
@@ -79,7 +79,7 @@ const user7: User = {
 
 const user8: User = {
   name: 'Mary',
-  song: 'Easy Love',
+  song: 'song4',
   picture: 'woman3',
   animation: 'sun',
   gender: 'female',
@@ -90,7 +90,7 @@ const user8: User = {
 
 const user9: User = {
   name: 'Selina',
-  song: 'When the party`s over',
+  song: 'song4',
   picture: 'woman4',
   animation: 'sun',
   gender: 'female',
