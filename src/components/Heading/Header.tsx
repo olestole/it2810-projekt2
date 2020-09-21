@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
-import Logo from 'assets/header/l.svg';
 import moon from 'assets/header/moon.svg';
 import sun from 'assets/header/sun.svg';
-import AppContext from '../../utils/AppContext';
+import AppContext from 'utils/AppContext';
+import Logo from 'assets/logo.png';
+import darkMode from 'assets/darkmode.png';
+
 import './header.css';
 
 const Heading = () => {

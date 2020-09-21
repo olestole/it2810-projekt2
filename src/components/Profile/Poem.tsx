@@ -7,6 +7,8 @@ import { IPoem } from 'types';
 
 import { fetchPoem } from '../../utils/fetchPoem';
 
+import '../ProfileView/profile.css';
+
 const Poem = () => {
   const { appState, appDispatch } = useContext(AppContext);
   const [currentPoem, setCurrentPoem] = useState<IPoem[] | undefined>();

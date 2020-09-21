@@ -2,6 +2,10 @@ import React, { useContext } from 'react';
 import AppContext from 'utils/AppContext';
 import { Poem } from 'components/Profile';
 import song from 'utils/songsConverter';
+import { GalleryTile } from 'components/GalleryTile';
+
+import './profileView.css';
+import { UserTile } from 'components/ProfileView';
 
 const ProfileView = () => {
   const { appState, appDispatch } = useContext(AppContext);
@@ -12,10 +16,13 @@ const ProfileView = () => {
   };
 
   return (
-    <div>
-      <h1>ProfileView</h1>
-      <h2>{appState.currentUser?.name}</h2>
-      <Poem />
+    <div className="profileView">
+      <div className="profilePicture">
+        <UserTile user={appState.currentUser!} />
+      </div>
+      <div className="poem">
+        <Poem />
+      </div>
       <audio controls autoPlay>
         <source src={song(appState.currentUser != null ? appState.currentUser?.song : '')} type="audio/mpeg" />
         Your browser does not support the audio element.
