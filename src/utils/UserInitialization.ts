@@ -8,7 +8,7 @@ const user1: User = {
   gender: 'male',
   age: 21,
   liked: false,
-  poemTitle: 'Now I knew I lost her --',
+  favAuthor: 'William Shakespeare',
 };
 
 const user2: User = {
@@ -19,7 +19,7 @@ const user2: User = {
   gender: 'male',
   age: 23,
   liked: false,
-  poemTitle: 'poem2',
+  favAuthor: 'poem2',
 };
 
 const user3: User = {
@@ -30,7 +30,7 @@ const user3: User = {
   gender: 'male',
   age: 22,
   liked: false,
-  poemTitle: 'poem3',
+  favAuthor: 'poem3',
 };
 
 const user4: User = {
@@ -41,7 +41,7 @@ const user4: User = {
   gender: 'male',
   age: 23,
   liked: false,
-  poemTitle: 'poem4',
+  favAuthor: 'poem4',
 };
 
 const user5: User = {
@@ -52,7 +52,7 @@ const user5: User = {
   gender: 'male',
   age: 25,
   liked: false,
-  poemTitle: 'poem5',
+  favAuthor: 'poem5',
 };
 
 const user6: User = {
@@ -63,7 +63,7 @@ const user6: User = {
   gender: 'female',
   age: 21,
   liked: false,
-  poemTitle: 'poem6',
+  favAuthor: 'poem6',
 };
 
 const user7: User = {
@@ -74,7 +74,7 @@ const user7: User = {
   gender: 'female',
   age: 22,
   liked: false,
-  poemTitle: 'poem7',
+  favAuthor: 'poem7',
 };
 
 const user8: User = {
@@ -85,7 +85,7 @@ const user8: User = {
   gender: 'female',
   age: 18,
   liked: false,
-  poemTitle: 'poem8',
+  favAuthor: 'poem8',
 };
 
 const user9: User = {
@@ -96,7 +96,7 @@ const user9: User = {
   gender: 'female',
   age: 20,
   liked: false,
-  poemTitle: 'poem9',
+  favAuthor: 'poem9',
 };
 
 export const initialUsers = [user1, user2, user3, user4, user5, user6, user7, user8, user9];

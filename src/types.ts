@@ -9,7 +9,7 @@ export interface User {
   gender: Gender;
   age: number;
   liked: boolean;
-  poemTitle: string;
+  favAuthor: string;
 }
 
 export interface UserCollection {
@@ -20,6 +20,7 @@ export interface IPoem {
   title: string;
   author: string;
   lines: string[];
+  linecount: number;
 }
 
 export type FilterType = Gender | AnimationType;
