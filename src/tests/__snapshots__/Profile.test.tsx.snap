@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header test-suite profile renders 1`] = `<App />`;
+
+exports[`Header test-suite profile renders 2`] = `<Heading />`;

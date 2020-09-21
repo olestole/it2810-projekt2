@@ -5,7 +5,7 @@ import Refresh from './refresh.png';
 
 import { IPoem } from 'types';
 
-import { fetchPoem } from 'utils/fetchPoem';
+import { fetchPoem } from '../../utils/fetchPoem';
 
 const Poem = () => {
   const { appState, appDispatch } = useContext(AppContext);

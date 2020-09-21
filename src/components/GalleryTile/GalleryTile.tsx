@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import AppContext from 'utils/AppContext';
+import AppContext from '../../utils/AppContext';
 import '../GalleryTile/GalleryTile.css';
 
-import { AnimationSVG } from 'components/AnimationsSVG';
-import { PeopleSVG } from 'components/AnimationsSVG';
+import { AnimationSVG } from '../../components/AnimationsSVG';
+import { PeopleSVG } from '../../components/AnimationsSVG';
 
 import { User } from 'types';
 
