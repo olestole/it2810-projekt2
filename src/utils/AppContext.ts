@@ -15,6 +15,17 @@ export type AppAction =
   | { type: 'setFilter'; payload: FilterType }
   | { type: 'removeFilter'; payload: FilterType };
 
+const sverre: User = {
+  name: 'Sverre',
+  song: 'Hmmm',
+  picture: 'man1',
+  animation: 'cloud',
+  gender: 'male',
+  age: 23,
+  liked: false,
+  favAuthor: 'William Shakespear',
+};
+
 export const initialAppState: AppState = {
   users: initialUsers,
   currentUser: null,
