@@ -40,9 +40,6 @@ const reducer: appReducer = (state: AppState, action: AppAction): AppState => {
     default:
       return state;
   }
-  //toggleTheme, lage ny state variabel: darkmode (bool)
-  //Fikse effekt for bytting av logo
-  // Fikse home button, størrelse,
 };
 
 export default reducer;
