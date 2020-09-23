@@ -11,7 +11,6 @@ const reducer: appReducer = (state: AppState, action: AppAction): AppState => {
         ...state,
         currentUser: action.payload,
       };
-
     case 'setName':
       const userIndex = state.users.findIndex((user: User) => user.name === action.targetUser);
       if (userIndex === -1) {
@@ -32,6 +31,11 @@ const reducer: appReducer = (state: AppState, action: AppAction): AppState => {
       return {
         ...state,
         filter: removeFilter(action.payload, state),
+      };
+    case 'darkmode':
+      return {
+        ...state,
+        darkmode: !state.darkmode,
       };
     default:
       return state;
