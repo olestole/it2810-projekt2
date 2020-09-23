@@ -19,7 +19,7 @@ const user2: User = {
   gender: 'male',
   age: 23,
   liked: false,
-  favAuthor: 'poem2',
+  favAuthor: 'Robert Burns',
 };
 
 const user3: User = {
@@ -30,7 +30,7 @@ const user3: User = {
   gender: 'male',
   age: 22,
   liked: false,
-  favAuthor: 'poem3',
+  favAuthor: 'Sir John Suckling',
 };
 
 const user4: User = {
@@ -41,7 +41,7 @@ const user4: User = {
   gender: 'male',
   age: 23,
   liked: false,
-  favAuthor: 'poem4',
+  favAuthor: 'William Ernest Henley',
 };
 
 const user5: User = {
@@ -52,7 +52,7 @@ const user5: User = {
   gender: 'male',
   age: 25,
   liked: false,
-  favAuthor: 'poem5',
+  favAuthor: 'Jane Taylor',
 };
 
 const user6: User = {
@@ -63,7 +63,7 @@ const user6: User = {
   gender: 'female',
   age: 21,
   liked: false,
-  favAuthor: 'poem6',
+  favAuthor: 'Helen Hunt Jackson',
 };
 
 const user7: User = {
@@ -74,7 +74,7 @@ const user7: User = {
   gender: 'female',
   age: 22,
   liked: false,
-  favAuthor: 'poem7',
+  favAuthor: 'Emily Bronte',
 };
 
 const user8: User = {
@@ -85,7 +85,7 @@ const user8: User = {
   gender: 'female',
   age: 18,
   liked: false,
-  favAuthor: 'poem8',
+  favAuthor: 'Eliza Cook',
 };
 
 const user9: User = {
@@ -96,7 +96,7 @@ const user9: User = {
   gender: 'female',
   age: 20,
   liked: false,
-  favAuthor: 'poem9',
+  favAuthor: 'Christopher Smart',
 };
 
 export const initialUsers = [user1, user2, user3, user4, user5, user6, user7, user8, user9];

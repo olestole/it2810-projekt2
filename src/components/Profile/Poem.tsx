@@ -7,6 +7,8 @@ import { IPoem } from 'types';
 
 import { fetchPoem } from '../../utils/fetchPoem';
 
+import '../ProfileView/profile.css';
+
 const Poem = () => {
   const { appState, appDispatch } = useContext(AppContext);
   const [currentPoem, setCurrentPoem] = useState<IPoem[] | undefined>();
@@ -14,7 +16,7 @@ const Poem = () => {
 
   const getPoem = async () => {
     if (appState.currentUser) {
-      const poemResponse = await fetchPoem(appState.currentUser.favAuthor);
+      const poemResponse = await fetchPoem(appState.currentUser?.favAuthor);
       setCurrentPoem(poemResponse as IPoem[]);
     }
   };

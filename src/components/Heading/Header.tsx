@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
-import Logo from 'assets/header/l.svg';
 import moon from 'assets/header/moon.svg';
 import sun from 'assets/header/sun.svg';
-import AppContext from '../../utils/AppContext';
+import AppContext from 'utils/AppContext';
+import Logo from 'assets/header/appLogo.svg';
+
 import './header.css';
 
 const Heading = () => {
