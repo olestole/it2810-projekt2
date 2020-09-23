@@ -1,13 +1,12 @@
 import React, { useContext, useState, useEffect } from 'react';
 import AppContext from 'utils/AppContext';
-import './profile.css';
 import Refresh from './refresh.png';
-
+import Spinner from 'components/Spinner';
 import { IPoem } from 'types';
 
 import { fetchPoem } from '../../utils/fetchPoem';
 
-import '../ProfileView/profile.css';
+import './profile.css';
 
 const Poem = () => {
   const { appState, appDispatch } = useContext(AppContext);
@@ -17,7 +16,9 @@ const Poem = () => {
   const getPoem = async () => {
     if (appState.currentUser) {
       const poemResponse = await fetchPoem(appState.currentUser?.favAuthor);
-      setCurrentPoem(poemResponse as IPoem[]);
+      if (poemResponse != null) {
+        setCurrentPoem(poemResponse as IPoem[]);
+      }
     }
   };
 
@@ -25,33 +26,32 @@ const Poem = () => {
     if (appState.currentUser) {
       getPoem();
     }
-  }, [randNumber]);
+  }, []);
 
   const RenderLinesString = () => {
-    let finalPoem = '';
-
     if (currentPoem) {
       randNumber = Math.floor(Math.random() * currentPoem.length);
-      if (currentPoem[randNumber].linecount < 30) {
-        currentPoem[randNumber].lines.forEach((line: string, index: number) =>
-          index == 0 ? (finalPoem += '') : (finalPoem += line + '\n'),
-        );
-      } else {
-        getPoem();
-      }
+      return (
+        <div id="poem">
+          <h1>{currentPoem ? currentPoem[randNumber].title : null}</h1>
+          {currentPoem[randNumber].lines.map((line: string, index: number) => (
+            <p>{line}</p>
+          ))}
+          <h3>- {currentPoem ? currentPoem[randNumber].author : null}</h3>
+        </div>
+      );
     }
     return (
       <div id="poem">
-        <h1>{currentPoem ? currentPoem[randNumber].title : null}</h1>
-        {finalPoem}
-        <p>- {currentPoem ? currentPoem[randNumber].author : null}</p>
+        <h3>Loading poem...</h3>
+        <Spinner />
       </div>
     );
   };
 
   return (
     <div id="poemContainer">
-      <img src={Refresh} onClick={getPoem}></img>
+      {/* <img src={Refresh} onClick={getPoem}></img> */}
       {RenderLinesString()}
     </div>
   );
