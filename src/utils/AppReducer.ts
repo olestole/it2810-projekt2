@@ -35,7 +35,7 @@ const reducer: appReducer = (state: AppState, action: AppAction): AppState => {
     case 'darkmode':
       return {
         ...state,
-        darkmode: action.payload,
+        darkmode: !state.darkmode,
       };
     default:
       return state;

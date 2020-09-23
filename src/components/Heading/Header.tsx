@@ -13,7 +13,7 @@ const Heading = () => {
   };
 
   const toggleDarkmode = () => {
-    appDispatch({ type: 'darkmode', payload: !appState.darkmode });
+    appDispatch({ type: 'darkmode' });
   };
 
   return (
