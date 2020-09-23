@@ -16,7 +16,7 @@ const Poem = () => {
 
   const getPoem = async () => {
     if (appState.currentUser) {
-      const poemResponse = await fetchPoem(appState.currentUser.favAuthor);
+      const poemResponse = await fetchPoem(appState.currentUser?.favAuthor);
       setCurrentPoem(poemResponse as IPoem[]);
     }
   };

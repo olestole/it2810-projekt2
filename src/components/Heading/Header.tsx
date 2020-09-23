@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import moon from 'assets/header/moon.svg';
 import sun from 'assets/header/sun.svg';
 import AppContext from 'utils/AppContext';
-import Logo from 'assets/logo.png';
+import Logo from 'assets/header/l.svg';
 import darkMode from 'assets/darkmode.png';
 
 import './header.css';
