@@ -1,14 +1,27 @@
 #poemContainer {
-  width: auto;
-  height: auto;
-  padding: 20px;
-  position: relative;
-  max-width: 400px;
+  height: 100%;
+  margin: 0 10% 0 10%;
 }
 
-#poemContainer img {
-  position: absolute;
-  right: 2.5%;
-  bottom: 2.5%;
+#spinner {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reloadContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 10px 10px 0;
+}
+
+#reloadButton {
+  font-size: 30px;
   cursor: pointer;
+}
+
+.mainContainer {
+  width: 100%;
+  height: 100%;
 }
