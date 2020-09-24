@@ -23,12 +23,12 @@ const Poem = () => {
       const poemResponse = await fetchPoem(appState.currentUser?.favAuthor);
       if (poemResponse != null) {
         setCurrentPoemList(poemResponse as IPoem[]);
-        genereateRandomPoem(poemResponse as IPoem[]);
+        getNextPoem(poemResponse as IPoem[]);
       }
     }
   };
 
-  const genereateRandomPoem = (poemlist?: IPoem[]) => {
+  const getNextPoem = (poemlist?: IPoem[]) => {
     // Needs to do this optional direct passing of poemlist as useState isn't synchronous --> Doesn't get a poem on first load
     const poemList = currentPoemList ? currentPoemList : poemlist ? poemlist : null;
     if (poemList) {
@@ -62,7 +62,7 @@ const Poem = () => {
     <div className="mainContainer">
       {currentPoem ? (
         <div className="reloadContainer">
-          <AiOutlineReload id="reloadButton" onClick={() => genereateRandomPoem()} />
+          <AiOutlineReload id="reloadButton" onClick={() => getNextPoem()} />
         </div>
       ) : null}
       <div id="poemContainer">{currentPoem ? RenderLinesString() : <div id="spinner">{Spinner()}</div>}</div>
