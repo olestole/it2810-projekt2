@@ -12,17 +12,39 @@ const user1: User = {
 };
 
 const user2: User = {
+  name: 'Astrid',
+  song: 'song4',
+  picture: 'woman1',
+  animation: 'spaceship',
+  gender: 'female',
+  age: 22,
+  liked: false,
+  favAuthor: 'Emily Bronte',
+};
+
+const user3: User = {
   name: 'Thomas',
   song: 'song1',
   picture: 'man2',
-  animation: 'stars',
+  animation: 'cloud',
   gender: 'male',
   age: 23,
   liked: false,
   favAuthor: 'Robert Burns',
 };
 
-const user3: User = {
+const user4: User = {
+  name: 'Selina',
+  song: 'song4',
+  picture: 'woman2',
+  animation: 'sun',
+  gender: 'female',
+  age: 20,
+  liked: false,
+  favAuthor: 'Christopher Smart',
+};
+
+const user5: User = {
   name: 'Albert',
   song: 'song2',
   picture: 'man3',
@@ -33,51 +55,7 @@ const user3: User = {
   favAuthor: 'Sir John Suckling',
 };
 
-const user4: User = {
-  name: 'Bill',
-  song: 'song2',
-  picture: 'man4',
-  animation: 'cloud',
-  gender: 'male',
-  age: 23,
-  liked: false,
-  favAuthor: 'William Ernest Henley',
-};
-
-const user5: User = {
-  name: 'Harry',
-  song: 'song3',
-  picture: 'man5',
-  animation: 'cloud',
-  gender: 'male',
-  age: 25,
-  liked: false,
-  favAuthor: 'Jane Taylor',
-};
-
 const user6: User = {
-  name: 'Sophie',
-  song: 'song3',
-  picture: 'woman1',
-  animation: 'cloud',
-  gender: 'female',
-  age: 21,
-  liked: false,
-  favAuthor: 'Helen Hunt Jackson',
-};
-
-const user7: User = {
-  name: 'Astrid',
-  song: 'song4',
-  picture: 'woman2',
-  animation: 'sun',
-  gender: 'female',
-  age: 22,
-  liked: false,
-  favAuthor: 'Emily Bronte',
-};
-
-const user8: User = {
   name: 'Mary',
   song: 'song4',
   picture: 'woman3',
@@ -88,15 +66,37 @@ const user8: User = {
   favAuthor: 'Eliza Cook',
 };
 
-const user9: User = {
-  name: 'Selina',
-  song: 'song4',
-  picture: 'woman4',
-  animation: 'sun',
-  gender: 'female',
-  age: 20,
+const user7: User = {
+  name: 'Bill',
+  song: 'song2',
+  picture: 'man4',
+  animation: 'cloud',
+  gender: 'male',
+  age: 23,
   liked: false,
-  favAuthor: 'Christopher Smart',
+  favAuthor: 'William Ernest Henley',
+};
+
+const user8: User = {
+  name: 'Sophie',
+  song: 'song3',
+  picture: 'woman4',
+  animation: 'spaceship',
+  gender: 'female',
+  age: 21,
+  liked: false,
+  favAuthor: 'Helen Hunt Jackson',
+};
+
+const user9: User = {
+  name: 'Harry',
+  song: 'song3',
+  picture: 'man5',
+  animation: 'cloud',
+  gender: 'male',
+  age: 25,
+  liked: false,
+  favAuthor: 'Jane Taylor',
 };
 
 export const initialUsers = [user1, user2, user3, user4, user5, user6, user7, user8, user9];
