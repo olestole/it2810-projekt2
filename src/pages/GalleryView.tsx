@@ -4,6 +4,7 @@ import { GalleryTile } from '../components/GalleryTile';
 import { User } from 'types';
 import { Filter, generateFilters } from 'components/Filter';
 import '../pages/GalleryView.css';
+import 'components/main.css';
 
 const GalleryView = () => {
   const { appState, appDispatch } = useContext(AppContext);

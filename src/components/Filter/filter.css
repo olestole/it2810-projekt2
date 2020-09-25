@@ -12,16 +12,6 @@
   margin: 10px;
 }
 
-.filterBox {
-  display: flex;
-  align-items: center;
-
-  margin: 10px;
-  padding: 10px;
-  box-shadow: var(--box-shadow);
-  border-radius: var(--borderRadius);
-}
-
 .checkBox {
   margin-left: 5px;
   padding: 0;

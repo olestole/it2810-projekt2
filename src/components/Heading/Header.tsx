@@ -5,6 +5,7 @@ import AppContext from 'utils/AppContext';
 import Logo from 'assets/header/appLogo.svg';
 
 import './header.css';
+import 'components/main.css';
 
 const Heading = () => {
   const { appState, appDispatch } = useContext(AppContext);

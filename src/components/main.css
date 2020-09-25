@@ -1,8 +1,118 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap');
 
-html,
-body {
+body,
+html {
   margin: 0;
   padding: 0;
   font-family: 'Work Sans', sans-serif;
+}
+
+body .light,
+.dark {
+  height: 100vh;
+  background: var(--background);
+  --background: var(--bgColor);
+  transition: var(--transition);
+}
+
+.header {
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: var(--foreground);
+  transition: var(--transition);
+  color: var(--text);
+}
+
+.svgContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.1s;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--borderRadius);
+  background: var(--foreground);
+  transition: var(--transition);
+  color: var(--text);
+}
+
+.svgContainer:hover {
+  transform: scale(1.02);
+}
+
+.filterBox {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--borderRadius);
+  background: var(--foreground);
+  transition: var(--transition);
+  color: var(--text);
+}
+
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.1s;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--borderRadius);
+  background: var(--foreground);
+  transition: var(--transition);
+}
+
+.profileContainer:hover {
+  transform: scale(1.02);
+}
+
+.poem {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.1s;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--borderRadius);
+
+  background: var(--foreground);
+  transition: var(--transition);
+  color: var(--text);
+}
+
+:root {
+  --borderRadius: 8px;
+  --box-shadow: 0px 0px 10px 5px #00000020;
+  --box-shadow-glow: 0px 0px 10px 2px #ff525240;
+
+  --bg-lightblack: #1f1f1f;
+  --bg-black: #121212;
+  --bg-white: white;
+  --text-black: black;
+  --bg-lightgrey: lightgrey;
+  --transition: background 500ms ease-in-out, color 1000ms ease-in-out;
+  --background: #121212;
+}
+
+.dark {
+  --bgColor: var(--bg-black);
+  --foreground: var(--bg-lightblack);
+  --text: var(--bg-white);
+  --background: #121212;
+}
+
+.light {
+  --bgColor: var(--bg-white);
+  --foreground: var(--bg-lightgrey);
+  --text: var(--text-black);
+  --background: #fff;
 }
