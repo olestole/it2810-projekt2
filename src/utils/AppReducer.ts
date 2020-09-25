@@ -26,6 +26,19 @@ const reducer: appReducer = (state: AppState, action: AppAction): AppState => {
         ...state,
         users: usersCopy,
       };
+    case 'likeUser':
+      const userI = state.users.findIndex((user: User) => user.name === action.targetUser);
+      if (userI === -1) {
+        console.log('COuldnt find index');
+        return state;
+      }
+      const usersCopied = [...state.users];
+      let newUser: User = { ...usersCopied[userI], liked: !usersCopied[userI].liked };
+      usersCopied[userI] = newUser;
+      return {
+        ...state,
+        users: usersCopied,
+      };
     case 'setFilter':
       return {
         ...state,
@@ -40,19 +53,6 @@ const reducer: appReducer = (state: AppState, action: AppAction): AppState => {
       return {
         ...state,
         darkmode: !state.darkmode,
-      };
-    case 'likeUser':
-      const likeUserIndex = state.users.findIndex((user: User) => user.name === action.payload.name);
-      if (likeUserIndex === -1) {
-        console.log('COuldnt find index');
-        return state;
-      }
-      const updatedUsers = [...state.users];
-      updatedUsers[likeUserIndex].liked = true;
-
-      return {
-        ...state,
-        users: updatedUsers,
       };
     default:
       return state;

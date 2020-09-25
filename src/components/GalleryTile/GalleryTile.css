@@ -27,7 +27,6 @@
 
 .svgPeople {
   position: relative;
-  z-index: 1;
   width: 90%;
 }
 
@@ -47,6 +46,13 @@
   z-index: 2;
   font-size: 4em;
   font-weight: 500;
+}
+
+#heart {
+  z-index: -1;
+  position: absolute;
+  top: -10%;
+  width: 100%;
 }
 
 #cloud {
