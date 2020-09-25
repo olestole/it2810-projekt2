@@ -16,7 +16,7 @@ const App = () => {
   }, [appState]);
 
   return (
-    <div className="App">
+    <div className={appState.darkmode ? 'dark' : 'light'}>
       <Heading />
       {appState.currentUser !== null ? <ProfileView /> : <GalleryView />}
     </div>

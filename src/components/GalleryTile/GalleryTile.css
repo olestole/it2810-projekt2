@@ -1,29 +1,9 @@
-:root {
-  --borderRadius: 8px;
-  --box-shadow: 0px 0px 10px 5px #00000020;
-  --box-shadow-glow: 0px 0px 10px 2px #ff525240;
-
-  /* Colors */
+/* Colors 
   --background: #131313;
   --container: #1f1f1f;
   --orange: #f8bd7f;
   --buttonGrey: #333;
-  --button-notification: #3f3f3f;
-}
-
-.svgContainer {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  transition: 0.1s;
-  box-shadow: var(--box-shadow);
-  border-radius: var(--borderRadius);
-}
-
-.svgContainer:hover {
-  transform: scale(1.02);
-}
+  --button-notification: #3f3f3f;*/
 
 .svgPeople {
   position: relative;
@@ -34,7 +14,6 @@
 .svgAnimation {
   position: relative;
   margin: -25% 0 0 0;
-
   z-index: 0;
   width: 50%;
   top: 25%;

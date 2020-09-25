@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import AppContext from '../../utils/AppContext';
 import '../GalleryTile/GalleryTile.css';
+import 'components/main.css';
 
 import { AnimationSVG } from '../../components/AnimationsSVG';
 import { PeopleSVG } from '../../components/AnimationsSVG';

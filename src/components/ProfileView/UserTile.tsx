@@ -5,6 +5,7 @@ import { AnimationSVG } from 'components/AnimationsSVG';
 import { PeopleSVG } from 'components/AnimationsSVG';
 
 import './profile.css';
+import 'components/main.css';
 
 import { User } from 'types';
 

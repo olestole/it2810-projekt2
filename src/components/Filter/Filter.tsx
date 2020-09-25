@@ -4,6 +4,7 @@ import AppContext, { AppState } from 'utils/AppContext';
 import { FilterType, ProfileFilter, User } from 'types';
 
 import './filter.css';
+import 'components/main.css';
 
 const Filter = () => {
   const { appState, appDispatch } = useContext(AppContext);
