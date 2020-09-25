@@ -8,7 +8,7 @@ import 'components/main.css';
 
 const Filter = () => {
   const { appState, appDispatch } = useContext(AppContext);
-  const possibleFilters: FilterType[] = ['cloud', 'stars', 'heart', 'sun', 'male', 'female'];
+  const possibleFilters: FilterType[] = ['cloud', 'stars', 'spaceship', 'sun', 'heart', 'male', 'female'];
 
   const handleFilter = (e: any, filter: FilterType) => {
     e.target.checked
