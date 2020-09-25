@@ -20,14 +20,14 @@ const ProfileView = () => {
     <div className="profileView">
       <div className="profilePicture">
         <UserTile user={appState.currentUser!} />
-        <div style={{ margin: '10px 0' }}>
+        <div id="display" style={{ margin: '10px 0' }}>
           <audio controls autoPlay>
             <source src={song(appState.currentUser != null ? appState.currentUser?.song : '')} type="audio/mpeg" />
             Your browser does not support the audio element.
           </audio>
+          <LikeButton like={likePerson}></LikeButton>
         </div>
       </div>
-      <LikeButton like={likePerson}></LikeButton>
       <div className="poem">
         <Poem />
       </div>

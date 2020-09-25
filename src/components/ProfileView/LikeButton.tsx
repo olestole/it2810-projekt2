@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './likeButton.css';
 
 interface Likefunction {
   like: () => void;
@@ -10,6 +11,10 @@ export default class LikeButton extends Component<Likefunction> {
   }
 
   render() {
-    return <button onClick={this.props.like}>Like</button>;
+    return (
+      <button id="likeButton" onClick={this.props.like}>
+        Like
+      </button>
+    );
   }
 }

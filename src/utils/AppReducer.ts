@@ -50,19 +50,6 @@ const reducer: appReducer = (state: AppState, action: AppAction): AppState => {
         ...state,
         darkmode: !state.darkmode,
       };
-    case 'likeUser':
-      const likeUserIndex = state.users.findIndex((user: User) => user.name === action.payload.name);
-      if (likeUserIndex === -1) {
-        console.log('COuldnt find index');
-        return state;
-      }
-      const updatedUsers = [...state.users];
-      updatedUsers[likeUserIndex].liked = true;
-
-      return {
-        ...state,
-        users: updatedUsers,
-      };
     default:
       return state;
   }

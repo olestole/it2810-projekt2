@@ -1,0 +1,16 @@
+#likeButton {
+  padding: 2% 2%;
+  background: lightgray;
+  border: none;
+  border-radius: 8px;
+  color: #494949;
+  display: inline-block;
+  transition: all 0.4s ease 0s;
+}
+
+#likeButton:hover {
+  color: #ffffff;
+  background: #f05558;
+  border-color: #f05558;
+  transition: all 0.4s ease 0s;
+}
