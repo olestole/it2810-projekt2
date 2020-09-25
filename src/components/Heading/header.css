@@ -28,3 +28,16 @@
   width: 100%;
   cursor: pointer;
 }
+
+.headerInput {
+  display: flex;
+}
+
+.tinderName {
+  /* ADD THEMESWITCHER HERE */
+  color: white;
+}
+
+.errorString {
+  text-decoration: underline red;
+}
