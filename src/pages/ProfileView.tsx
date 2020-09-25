@@ -7,13 +7,13 @@ import { AiOutlineReload } from 'react-icons/ai';
 
 import './profileView.css';
 import { UserTile } from 'components/ProfileView';
+import LikeButton from 'components/ProfileView/LikeButton';
 
 const ProfileView = () => {
   const { appState, appDispatch } = useContext(AppContext);
 
-  let playSong = () => {
-    var audio = new Audio('/assets/mp3/song1.mp3');
-    audio.play();
+  let likePerson = () => {
+    appDispatch({ type: 'likeUser', targetUser: appState.currentUser!.name });
   };
 
   return (
@@ -27,6 +27,7 @@ const ProfileView = () => {
           </audio>
         </div>
       </div>
+      <LikeButton like={likePerson}></LikeButton>
       <div className="poem">
         <Poem />
       </div>

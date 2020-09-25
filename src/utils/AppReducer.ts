@@ -26,6 +26,15 @@ const reducer: appReducer = (state: AppState, action: AppAction): AppState => {
         ...state,
         users: usersCopy,
       };
+    case 'likeUser':
+      const userI = state.users.findIndex((user: User) => user.name === action.targetUser);
+      const usersCopied = [...state.users];
+      let newUser: User = { ...usersCopied[userI], liked: !usersCopied[userI].liked };
+      usersCopied[userI] = newUser;
+      return {
+        ...state,
+        users: usersCopied,
+      };
     case 'setFilter':
       return {
         ...state,
