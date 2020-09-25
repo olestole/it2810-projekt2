@@ -15,18 +15,8 @@ export type AppAction =
   | { type: 'setCurrentUser'; payload: User | null }
   | { type: 'setFilter'; payload: FilterType }
   | { type: 'removeFilter'; payload: FilterType }
-  | { type: 'darkmode' };
-
-const sverre: User = {
-  name: 'Sverre',
-  song: 'Hmmm',
-  picture: 'man1',
-  animation: 'cloud',
-  gender: 'male',
-  age: 23,
-  liked: false,
-  favAuthor: 'William Shakespear',
-};
+  | { type: 'darkmode' }
+  | { type: 'setLiked'; targetUser: string };
 
 export const initialAppState: AppState = {
   users: initialUsers,
