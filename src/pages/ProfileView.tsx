@@ -13,7 +13,11 @@ const ProfileView = () => {
   const { appState, appDispatch } = useContext(AppContext);
 
   let likePerson = () => {
+<<<<<<< HEAD
     appDispatch({ type: 'likeUser', targetUser: appState.currentUser!.name });
+=======
+    appDispatch({ type: 'setLiked', targetUser: appState.currentUser!.name });
+>>>>>>> 215f004c36727aabd43c0979fa02186380f5dd2a
   };
 
   return (
@@ -31,6 +35,14 @@ const ProfileView = () => {
       <div className="poem">
         <Poem />
       </div>
+<<<<<<< HEAD
+=======
+      <audio controls autoPlay>
+        <source src={song(appState.currentUser != null ? appState.currentUser?.song : '')} type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+      <LikeButton like={likePerson}></LikeButton>
+>>>>>>> 215f004c36727aabd43c0979fa02186380f5dd2a
     </div>
   );
 };
