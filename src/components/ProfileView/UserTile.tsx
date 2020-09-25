@@ -15,12 +15,12 @@ interface UserTileProps {
 const UserTile = ({ user }: UserTileProps) => {
   const { appState, appDispatch } = useContext(AppContext);
 
-  const handleProfileClick = (u: User) => {
-    appDispatch({ type: 'setCurrentUser', payload: u });
+  const handleLike = () => {
+    appDispatch({ type: 'likeUser', payload: user });
   };
 
   return (
-    <div className="profileContainer" onClick={(_) => handleProfileClick(user)}>
+    <div className="profileContainer" onDoubleClick={handleLike}>
       {/* <div id={user.animation} className="svgAnimation">
         <AnimationSVG type={user.animation} />
       </div> */}

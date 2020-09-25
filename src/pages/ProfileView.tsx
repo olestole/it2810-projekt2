@@ -3,6 +3,7 @@ import AppContext from 'utils/AppContext';
 import { Poem } from 'components/Profile';
 import song from 'utils/songsConverter';
 import { GalleryTile } from 'components/GalleryTile';
+import { AiOutlineReload } from 'react-icons/ai';
 
 import './profileView.css';
 import { UserTile } from 'components/ProfileView';
@@ -19,14 +20,16 @@ const ProfileView = () => {
     <div className="profileView">
       <div className="profilePicture">
         <UserTile user={appState.currentUser!} />
+        <div style={{ margin: '10px 0' }}>
+          <audio controls autoPlay>
+            <source src={song(appState.currentUser != null ? appState.currentUser?.song : '')} type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
       </div>
       <div className="poem">
         <Poem />
       </div>
-      <audio controls autoPlay>
-        <source src={song(appState.currentUser != null ? appState.currentUser?.song : '')} type="audio/mpeg" />
-        Your browser does not support the audio element.
-      </audio>
     </div>
   );
 };

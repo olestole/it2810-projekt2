@@ -1,58 +1,71 @@
 import React, { useContext, useState, useEffect } from 'react';
 import AppContext from 'utils/AppContext';
-import './profile.css';
-import Refresh from './refresh.png';
-
+import Spinner from 'components/Spinner';
 import { IPoem } from 'types';
+import { AiOutlineReload } from 'react-icons/ai';
 
 import { fetchPoem } from '../../utils/fetchPoem';
 
-import '../ProfileView/profile.css';
+import './profile.css';
 
 const Poem = () => {
   const { appState, appDispatch } = useContext(AppContext);
-  const [currentPoem, setCurrentPoem] = useState<IPoem[] | undefined>();
-  let randNumber = 1;
+  const [currentPoemList, setCurrentPoemList] = useState<IPoem[] | undefined>();
+  const [currentPoem, setCurrentPoem] = useState<IPoem | undefined>();
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+
+  useEffect(() => {
+    getPoem();
+  }, []);
 
   const getPoem = async () => {
     if (appState.currentUser) {
       const poemResponse = await fetchPoem(appState.currentUser?.favAuthor);
-      setCurrentPoem(poemResponse as IPoem[]);
+      if (poemResponse != null) {
+        setCurrentPoemList(poemResponse as IPoem[]);
+        getNextPoem(poemResponse as IPoem[]);
+      }
     }
   };
 
-  useEffect(() => {
-    if (appState.currentUser) {
-      getPoem();
+  const getNextPoem = (poemlist?: IPoem[]) => {
+    // Needs to do this optional direct passing of poemlist as useState isn't synchronous --> Doesn't get a poem on first load
+    const poemList = currentPoemList ? currentPoemList : poemlist ? poemlist : null;
+    if (poemList) {
+      setCurrentPoem(poemList[currentIndex]);
+      setCurrentIndex((currentIndex + 1) % poemList.length);
     }
-  }, [randNumber]);
+  };
+
+  const truncatePoemLines = (poem: IPoem, length: number = 30): string[] => {
+    if (poem.linecount > 30) {
+      return [...poem.lines.slice(0, length), '...'];
+    }
+    return poem.lines;
+  };
 
   const RenderLinesString = () => {
-    let finalPoem = '';
-
-    if (currentPoem) {
-      randNumber = Math.floor(Math.random() * currentPoem.length);
-      if (currentPoem[randNumber].linecount < 30) {
-        currentPoem[randNumber].lines.forEach((line: string, index: number) =>
-          index == 0 ? (finalPoem += '') : (finalPoem += line + '\n'),
-        );
-      } else {
-        getPoem();
-      }
+    if (currentPoemList) {
+      return (
+        <div id="poem">
+          <h1>{currentPoem?.title}</h1>
+          {truncatePoemLines(currentPoem!).map((line: string, index: number) => (
+            <p key={index}>{line}</p>
+          ))}
+          <h3>- {currentPoem?.author}</h3>
+        </div>
+      );
     }
-    return (
-      <div id="poem">
-        <h1>{currentPoem ? currentPoem[randNumber].title : null}</h1>
-        {finalPoem}
-        <p>- {currentPoem ? currentPoem[randNumber].author : null}</p>
-      </div>
-    );
   };
 
   return (
-    <div id="poemContainer">
-      <img src={Refresh} onClick={getPoem}></img>
-      {RenderLinesString()}
+    <div className="mainContainer">
+      {currentPoem ? (
+        <div className="reloadContainer">
+          <AiOutlineReload id="reloadButton" onClick={() => getNextPoem()} />
+        </div>
+      ) : null}
+      <div id="poemContainer">{currentPoem ? RenderLinesString() : <div id="spinner">{Spinner()}</div>}</div>
     </div>
   );
 };

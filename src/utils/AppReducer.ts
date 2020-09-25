@@ -4,6 +4,10 @@ import { addFilter, removeFilter } from 'components/Filter';
 
 type appReducer = (prevState: AppState, action: AppAction) => AppState;
 
+const getUserIndex = (state: AppState, user: User) => {
+  return state.users.findIndex((stateUser: User) => stateUser === user);
+};
+
 const reducer: appReducer = (state: AppState, action: AppAction): AppState => {
   switch (action.type) {
     case 'setCurrentUser':
@@ -12,12 +16,12 @@ const reducer: appReducer = (state: AppState, action: AppAction): AppState => {
         currentUser: action.payload,
       };
     case 'setName':
-      const userIndex = state.users.findIndex((user: User) => user.name === action.targetUser);
-      if (userIndex === -1) {
+      const setNameUserIndex = state.users.findIndex((user: User) => user.name === action.targetUser);
+      if (setNameUserIndex === -1) {
         return state;
       }
       const usersCopy = [...state.users];
-      usersCopy[userIndex].name = action.payload;
+      usersCopy[setNameUserIndex].name = action.payload;
       return {
         ...state,
         users: usersCopy,
@@ -36,6 +40,19 @@ const reducer: appReducer = (state: AppState, action: AppAction): AppState => {
       return {
         ...state,
         darkmode: !state.darkmode,
+      };
+    case 'likeUser':
+      const likeUserIndex = state.users.findIndex((user: User) => user.name === action.payload.name);
+      if (likeUserIndex === -1) {
+        console.log('COuldnt find index');
+        return state;
+      }
+      const updatedUsers = [...state.users];
+      updatedUsers[likeUserIndex].liked = true;
+
+      return {
+        ...state,
+        users: updatedUsers,
       };
     default:
       return state;

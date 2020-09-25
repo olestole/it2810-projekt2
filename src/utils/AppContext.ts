@@ -15,7 +15,8 @@ export type AppAction =
   | { type: 'setCurrentUser'; payload: User | null }
   | { type: 'setFilter'; payload: FilterType }
   | { type: 'removeFilter'; payload: FilterType }
-  | { type: 'darkmode' };
+  | { type: 'darkmode' }
+  | { type: 'likeUser'; payload: User };
 
 const sverre: User = {
   name: 'Sverre',
