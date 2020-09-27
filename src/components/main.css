@@ -80,6 +80,7 @@
   background: var(--foreground);
   display: inline-block;
   transition: var(--transition);
+  outline: none;
 }
 
 #likeButton:hover {

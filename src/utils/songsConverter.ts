@@ -1,4 +1,4 @@
-//https://soundcloud.com/hanangobran/sets/reading-music
+// Resources from: https://soundcloud.com/hanangobran/sets/reading-music
 
 const song = (songName: string) => {
   switch (songName) {

@@ -6,10 +6,6 @@
   justify-items: stretch;
 }
 
-.profilePicture {
-  height: 50vh;
-}
-
 .poem {
   display: flex;
   justify-content: center;

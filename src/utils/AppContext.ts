@@ -16,7 +16,7 @@ export type AppAction =
   | { type: 'setFilter'; payload: FilterType }
   | { type: 'removeFilter'; payload: FilterType }
   | { type: 'darkmode' }
-  | { type: 'likeUser'; targetUser: string };
+  | { type: 'likeUser'; targetUser: User };
 
 export const initialAppState: AppState = {
   users: initialUsers,
