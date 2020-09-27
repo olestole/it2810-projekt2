@@ -1,14 +1,15 @@
 import React, { useContext, useState } from 'react';
 import AppContext from 'utils/AppContext';
-import { GalleryTile } from '../components/GalleryTile';
+import { GalleryTile } from 'components/GalleryTile';
 import { User } from 'types';
 import { Filter, generateFilters } from 'components/Filter';
-import '../pages/GalleryView.css';
+
+import './GalleryView.css';
 import 'components/main.css';
 
 const GalleryView = () => {
-  const { appState, appDispatch } = useContext(AppContext);
-  const [profiles, setProfiles] = useState<User[]>(appState.users);
+  const { appState } = useContext(AppContext);
+  const [profiles] = useState<User[]>(appState.users);
 
   const renderProfiles = () => {
     // If there are filters in appState --> Apply them before mapping the users
@@ -20,7 +21,7 @@ const GalleryView = () => {
   };
 
   return (
-    <div>
+    <div className={appState.darkmode ? 'dark' : 'light'}>
       <Filter />
       <div className="gridContainer">{renderProfiles()}</div>
     </div>

@@ -1,3 +1,5 @@
 import UserTile from './UserTile';
+import LikeButton from './LikeButton';
+import Poem from './Poem';
 
-export { UserTile };
+export { UserTile, LikeButton, Poem };

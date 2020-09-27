@@ -1,10 +1,3 @@
-/* Colors 
-  --background: #131313;
-  --container: #1f1f1f;
-  --orange: #f8bd7f;
-  --buttonGrey: #333;
-  --button-notification: #3f3f3f;*/
-
 .svgMainElements {
   position: relative;
   width: 90%;
@@ -64,7 +57,7 @@
   animation: orbit 6s linear infinite;
 }
 
-/*https://codepen.io/Benedikte/pen/bIuGr*/
+/* https://codepen.io/Benedikte/pen/bIuGr */
 @keyframes sun-glow {
   0% {
     fill: #f1c40f;

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import './likeButton.css';
+import 'components/main.css';
 
-interface Likefunction {
+interface LikeButtonProps {
   like: () => void;
 }
 
-export default class LikeButton extends Component<Likefunction> {
-  constructor(props: any) {
+export default class LikeButton extends Component<LikeButtonProps> {
+  constructor(props: LikeButtonProps) {
     super(props);
   }
 

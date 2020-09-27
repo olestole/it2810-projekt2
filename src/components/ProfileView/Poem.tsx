@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import AppContext from 'utils/AppContext';
-import Spinner from 'components/Spinner';
+import Spinner from './Spinner';
 import { IPoem } from 'types';
 import { AiOutlineReload } from 'react-icons/ai';
 
@@ -65,7 +65,7 @@ const Poem = () => {
           <AiOutlineReload id="reloadButton" onClick={() => getNextPoem()} />
         </div>
       ) : null}
-      <div id="poemContainer">{currentPoem ? RenderLinesString() : <div id="spinner">{Spinner()}</div>}</div>
+      <div className="poemContainer">{currentPoem ? RenderLinesString() : <div id="spinner">{Spinner()}</div>}</div>
     </div>
   );
 };

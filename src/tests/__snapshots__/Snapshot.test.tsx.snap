@@ -5,6 +5,69 @@ exports[`Whole page matches the snapshot 1`] = `
   className="light"
 >
   <div>
+    <div
+      className="ReactModal__Overlay ReactModal__Overlay--after-open"
+      onClick={[Function]}
+      onMouseDown={[Function]}
+      style={
+        Object {
+          "backgroundColor": "rgba(255, 255, 255, 0.75)",
+          "bottom": 0,
+          "left": 0,
+          "position": "fixed",
+          "right": 0,
+          "top": 0,
+          "zIndex": 1000,
+        }
+      }
+    >
+      <div
+        aria-label="Example Modal"
+        className="ReactModal__Content ReactModal__Content--after-open"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+        role="dialog"
+        style={
+          Object {
+            "WebkitOverflowScrolling": "touch",
+            "background": "#fff",
+            "border": "1px solid #ccc",
+            "borderRadius": "4px",
+            "bottom": "auto",
+            "left": "50%",
+            "marginRight": "-50%",
+            "outline": "none",
+            "overflow": "auto",
+            "padding": "20px",
+            "position": "absolute",
+            "right": "auto",
+            "top": "50%",
+            "transform": "translate(-50%, -50%)",
+          }
+        }
+        tabIndex="-1"
+      >
+        <div
+          style={
+            Object {
+              "display": "flex",
+              "flexDirection": "column",
+            }
+          }
+        >
+          <p
+            className="usualString"
+          >
+            Skriv inn ønsket brukernavn
+          </p>
+          <input
+            onChange={[Function]}
+          />
+        </div>
+      </div>
+    </div>
     <header
       className="header"
     >
@@ -20,6 +83,13 @@ exports[`Whole page matches the snapshot 1`] = `
           }
         />
       </div>
+      <div>
+        <h3
+          className="tinderName"
+        >
+          
+        </h3>
+      </div>
       <div
         className="darkmode"
       >
@@ -34,7 +104,9 @@ exports[`Whole page matches the snapshot 1`] = `
       </div>
     </header>
   </div>
-  <div>
+  <div
+    className="light"
+  >
     <div
       className="filterBoxCollection"
     >
@@ -47,8 +119,8 @@ exports[`Whole page matches the snapshot 1`] = `
           cloud
         </p>
         <input
-          checked={false}
           className="checkBox"
+          defaultChecked={false}
           onClick={[Function]}
           type="checkbox"
         />
@@ -62,8 +134,8 @@ exports[`Whole page matches the snapshot 1`] = `
           stars
         </p>
         <input
-          checked={false}
           className="checkBox"
+          defaultChecked={false}
           onClick={[Function]}
           type="checkbox"
         />
@@ -77,8 +149,8 @@ exports[`Whole page matches the snapshot 1`] = `
           spaceship
         </p>
         <input
-          checked={false}
           className="checkBox"
+          defaultChecked={false}
           onClick={[Function]}
           type="checkbox"
         />
@@ -92,8 +164,8 @@ exports[`Whole page matches the snapshot 1`] = `
           sun
         </p>
         <input
-          checked={false}
           className="checkBox"
+          defaultChecked={false}
           onClick={[Function]}
           type="checkbox"
         />
@@ -107,8 +179,8 @@ exports[`Whole page matches the snapshot 1`] = `
           heart
         </p>
         <input
-          checked={false}
           className="checkBox"
+          defaultChecked={false}
           onClick={[Function]}
           type="checkbox"
         />
@@ -122,8 +194,8 @@ exports[`Whole page matches the snapshot 1`] = `
           male
         </p>
         <input
-          checked={false}
           className="checkBox"
+          defaultChecked={false}
           onClick={[Function]}
           type="checkbox"
         />
@@ -137,8 +209,8 @@ exports[`Whole page matches the snapshot 1`] = `
           female
         </p>
         <input
-          checked={false}
           className="checkBox"
+          defaultChecked={false}
           onClick={[Function]}
           type="checkbox"
         />

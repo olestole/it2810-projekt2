@@ -1,7 +1,6 @@
 .darkmode {
   width: 36px;
-  max-height: inherit;
-  max-width: inherit;
+  margin-right: 1em;
 }
 
 .darkmode img {
@@ -11,11 +10,29 @@
 
 .logo {
   position: relative;
-  padding: 1%;
+  margin-left: 1em;
   width: 100px;
 }
 
 .logo img {
   width: 100%;
   cursor: pointer;
+}
+
+.headerInput {
+  display: flex;
+}
+
+.tinderName {
+  color: white;
+}
+
+@media (max-width: 400px) {
+  .tinderName {
+    font-size: 12px;
+    display: none;
+  }
+}
+.errorString {
+  text-decoration: underline red;
 }
