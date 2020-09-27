@@ -1,36 +1,73 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Header component matches the snapshot 1`] = `
-<div>
-  <header
-    className="header"
-  >
-    <div
-      className="logo"
-    >
-      <img
-        onClick={[Function]}
-        src={Object {}}
-      />
-    </div>
-    <div
-      className="darkmode"
-      onClick={[Function]}
-    >
-      <img
-        onClick={[Function]}
-        src={Object {}}
-      />
-    </div>
-  </header>
-</div>
-`;
-
 exports[`Whole page matches the snapshot 1`] = `
 <div
-  className="App"
+  className="light"
 >
   <div>
+    <div
+      className="ReactModal__Overlay ReactModal__Overlay--after-open"
+      onClick={[Function]}
+      onMouseDown={[Function]}
+      style={
+        Object {
+          "backgroundColor": "rgba(255, 255, 255, 0.75)",
+          "bottom": 0,
+          "left": 0,
+          "position": "fixed",
+          "right": 0,
+          "top": 0,
+          "zIndex": 1000,
+        }
+      }
+    >
+      <div
+        aria-label="Example Modal"
+        className="ReactModal__Content ReactModal__Content--after-open"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+        role="dialog"
+        style={
+          Object {
+            "WebkitOverflowScrolling": "touch",
+            "background": "#fff",
+            "border": "1px solid #ccc",
+            "borderRadius": "4px",
+            "bottom": "auto",
+            "left": "50%",
+            "marginRight": "-50%",
+            "outline": "none",
+            "overflow": "auto",
+            "padding": "20px",
+            "position": "absolute",
+            "right": "auto",
+            "top": "50%",
+            "transform": "translate(-50%, -50%)",
+          }
+        }
+        tabIndex="-1"
+      >
+        <div
+          style={
+            Object {
+              "display": "flex",
+              "flexDirection": "column",
+            }
+          }
+        >
+          <p
+            className="usualString"
+          >
+            Skriv inn ønsket brukernavn
+          </p>
+          <input
+            onChange={[Function]}
+          />
+        </div>
+      </div>
+    </div>
     <header
       className="header"
     >
@@ -39,21 +76,37 @@ exports[`Whole page matches the snapshot 1`] = `
       >
         <img
           onClick={[Function]}
-          src={Object {}}
+          src={
+            Object {
+              "ReactComponent": "IconMock",
+            }
+          }
         />
+      </div>
+      <div>
+        <h3
+          className="tinderName"
+        >
+          
+        </h3>
       </div>
       <div
         className="darkmode"
-        onClick={[Function]}
       >
         <img
           onClick={[Function]}
-          src={Object {}}
+          src={
+            Object {
+              "ReactComponent": "IconMock",
+            }
+          }
         />
       </div>
     </header>
   </div>
-  <div>
+  <div
+    className="light"
+  >
     <div
       className="filterBoxCollection"
     >
@@ -66,8 +119,8 @@ exports[`Whole page matches the snapshot 1`] = `
           cloud
         </p>
         <input
-          checked={false}
           className="checkBox"
+          defaultChecked={false}
           onClick={[Function]}
           type="checkbox"
         />
@@ -81,8 +134,8 @@ exports[`Whole page matches the snapshot 1`] = `
           stars
         </p>
         <input
-          checked={false}
           className="checkBox"
+          defaultChecked={false}
           onClick={[Function]}
           type="checkbox"
         />
@@ -93,11 +146,11 @@ exports[`Whole page matches the snapshot 1`] = `
         <p
           className="checkBoxText"
         >
-          heart
+          spaceship
         </p>
         <input
-          checked={false}
           className="checkBox"
+          defaultChecked={false}
           onClick={[Function]}
           type="checkbox"
         />
@@ -111,8 +164,23 @@ exports[`Whole page matches the snapshot 1`] = `
           sun
         </p>
         <input
-          checked={false}
           className="checkBox"
+          defaultChecked={false}
+          onClick={[Function]}
+          type="checkbox"
+        />
+      </div>
+      <div
+        className="filterBox"
+      >
+        <p
+          className="checkBoxText"
+        >
+          heart
+        </p>
+        <input
+          className="checkBox"
+          defaultChecked={false}
           onClick={[Function]}
           type="checkbox"
         />
@@ -126,8 +194,8 @@ exports[`Whole page matches the snapshot 1`] = `
           male
         </p>
         <input
-          checked={false}
           className="checkBox"
+          defaultChecked={false}
           onClick={[Function]}
           type="checkbox"
         />
@@ -141,8 +209,8 @@ exports[`Whole page matches the snapshot 1`] = `
           female
         </p>
         <input
-          checked={false}
           className="checkBox"
+          defaultChecked={false}
           onClick={[Function]}
           type="checkbox"
         />
@@ -162,9 +230,16 @@ exports[`Whole page matches the snapshot 1`] = `
           <IconMock />
         </div>
         <div
-          className="svgPeople"
+          className="svgMainElements"
         >
-          <IconMock />
+          <div
+            id="heart"
+          />
+          <div
+            id="people"
+          >
+            <IconMock />
+          </div>
         </div>
         <p
           className="svgText"
@@ -178,119 +253,21 @@ exports[`Whole page matches the snapshot 1`] = `
       >
         <div
           className="svgAnimation"
-          id="stars"
+          id="spaceship"
         >
           <IconMock />
         </div>
         <div
-          className="svgPeople"
+          className="svgMainElements"
         >
-          <IconMock />
-        </div>
-        <p
-          className="svgText"
-        >
-          Thomas
-        </p>
-      </div>
-      <div
-        className="svgContainer"
-        onClick={[Function]}
-      >
-        <div
-          className="svgAnimation"
-          id="stars"
-        >
-          <IconMock />
-        </div>
-        <div
-          className="svgPeople"
-        >
-          <IconMock />
-        </div>
-        <p
-          className="svgText"
-        >
-          Albert
-        </p>
-      </div>
-      <div
-        className="svgContainer"
-        onClick={[Function]}
-      >
-        <div
-          className="svgAnimation"
-          id="cloud"
-        >
-          <IconMock />
-        </div>
-        <div
-          className="svgPeople"
-        >
-          <IconMock />
-        </div>
-        <p
-          className="svgText"
-        >
-          Bill
-        </p>
-      </div>
-      <div
-        className="svgContainer"
-        onClick={[Function]}
-      >
-        <div
-          className="svgAnimation"
-          id="cloud"
-        >
-          <IconMock />
-        </div>
-        <div
-          className="svgPeople"
-        >
-          <IconMock />
-        </div>
-        <p
-          className="svgText"
-        >
-          Harry
-        </p>
-      </div>
-      <div
-        className="svgContainer"
-        onClick={[Function]}
-      >
-        <div
-          className="svgAnimation"
-          id="cloud"
-        >
-          <IconMock />
-        </div>
-        <div
-          className="svgPeople"
-        >
-          <IconMock />
-        </div>
-        <p
-          className="svgText"
-        >
-          Sophie
-        </p>
-      </div>
-      <div
-        className="svgContainer"
-        onClick={[Function]}
-      >
-        <div
-          className="svgAnimation"
-          id="sun"
-        >
-          <IconMock />
-        </div>
-        <div
-          className="svgPeople"
-        >
-          <IconMock />
+          <div
+            id="heart"
+          />
+          <div
+            id="people"
+          >
+            <IconMock />
+          </div>
         </div>
         <p
           className="svgText"
@@ -304,19 +281,26 @@ exports[`Whole page matches the snapshot 1`] = `
       >
         <div
           className="svgAnimation"
-          id="sun"
+          id="cloud"
         >
           <IconMock />
         </div>
         <div
-          className="svgPeople"
+          className="svgMainElements"
         >
-          <IconMock />
+          <div
+            id="heart"
+          />
+          <div
+            id="people"
+          >
+            <IconMock />
+          </div>
         </div>
         <p
           className="svgText"
         >
-          Mary
+          Thomas
         </p>
       </div>
       <div
@@ -330,14 +314,161 @@ exports[`Whole page matches the snapshot 1`] = `
           <IconMock />
         </div>
         <div
-          className="svgPeople"
+          className="svgMainElements"
         >
-          <IconMock />
+          <div
+            id="heart"
+          />
+          <div
+            id="people"
+          >
+            <IconMock />
+          </div>
         </div>
         <p
           className="svgText"
         >
           Selina
+        </p>
+      </div>
+      <div
+        className="svgContainer"
+        onClick={[Function]}
+      >
+        <div
+          className="svgAnimation"
+          id="stars"
+        >
+          <IconMock />
+        </div>
+        <div
+          className="svgMainElements"
+        >
+          <div
+            id="heart"
+          />
+          <div
+            id="people"
+          >
+            <IconMock />
+          </div>
+        </div>
+        <p
+          className="svgText"
+        >
+          Albert
+        </p>
+      </div>
+      <div
+        className="svgContainer"
+        onClick={[Function]}
+      >
+        <div
+          className="svgAnimation"
+          id="sun"
+        >
+          <IconMock />
+        </div>
+        <div
+          className="svgMainElements"
+        >
+          <div
+            id="heart"
+          />
+          <div
+            id="people"
+          >
+            <IconMock />
+          </div>
+        </div>
+        <p
+          className="svgText"
+        >
+          Mary
+        </p>
+      </div>
+      <div
+        className="svgContainer"
+        onClick={[Function]}
+      >
+        <div
+          className="svgAnimation"
+          id="cloud"
+        >
+          <IconMock />
+        </div>
+        <div
+          className="svgMainElements"
+        >
+          <div
+            id="heart"
+          />
+          <div
+            id="people"
+          >
+            <IconMock />
+          </div>
+        </div>
+        <p
+          className="svgText"
+        >
+          Bill
+        </p>
+      </div>
+      <div
+        className="svgContainer"
+        onClick={[Function]}
+      >
+        <div
+          className="svgAnimation"
+          id="spaceship"
+        >
+          <IconMock />
+        </div>
+        <div
+          className="svgMainElements"
+        >
+          <div
+            id="heart"
+          />
+          <div
+            id="people"
+          >
+            <IconMock />
+          </div>
+        </div>
+        <p
+          className="svgText"
+        >
+          Sophie
+        </p>
+      </div>
+      <div
+        className="svgContainer"
+        onClick={[Function]}
+      >
+        <div
+          className="svgAnimation"
+          id="cloud"
+        >
+          <IconMock />
+        </div>
+        <div
+          className="svgMainElements"
+        >
+          <div
+            id="heart"
+          />
+          <div
+            id="people"
+          >
+            <IconMock />
+          </div>
+        </div>
+        <p
+          className="svgText"
+        >
+          Harry
         </p>
       </div>
     </div>

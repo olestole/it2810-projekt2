@@ -22,7 +22,7 @@ const Filter = () => {
         <div key={index} className="filterBox">
           <p className="checkBoxText">{filter}</p>
           <input
-            checked={
+            defaultChecked={
               !appState.filter
                 ? false
                 : appState.filter.findIndex((appFilter: FilterType) => appFilter == filter) !== -1

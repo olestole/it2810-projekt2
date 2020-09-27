@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import moon from 'assets/header/moon.svg';
 import sun from 'assets/header/sun.svg';
 import AppContext from 'utils/AppContext';
@@ -52,7 +52,13 @@ const Heading = () => {
 
   return (
     <div>
-      <Modal style={customStyles} isOpen={modalOpen} onRequestClose={closeModal} contentLabel="Example Modal">
+      <Modal
+        style={customStyles}
+        isOpen={modalOpen}
+        onRequestClose={closeModal}
+        contentLabel="Example Modal"
+        ariaHideApp={false}
+      >
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <p className={userError ? 'errorString' : 'usualString'}>Skriv inn ønsket brukernavn</p>
           <input onChange={handleChange} />
