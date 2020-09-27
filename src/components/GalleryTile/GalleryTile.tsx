@@ -25,9 +25,11 @@ const GalleryTile = ({ user }: GalleryTileProps) => {
       <div id={user.animation} className="svgAnimation">
         <AnimationSVG type={user.animation} />
       </div>
-      <div className="svgPeople">
+      <div className="svgMainElements">
         <div id="heart">{user.liked ? <Heart /> : null}</div>
-        <PeopleSVG type={user.picture} />
+        <div id="people">
+          <PeopleSVG type={user.picture} />
+        </div>
       </div>
 
       <p className="svgText">{user.name}</p>

@@ -37,6 +37,7 @@ const reducer: appReducer = (state: AppState, action: AppAction): AppState => {
       usersCopied[userI] = newUser;
       return {
         ...state,
+        currentUser: newUser,
         users: usersCopied,
       };
     case 'setFilter':
