@@ -4,10 +4,11 @@ import AppContext, { AppState } from 'utils/AppContext';
 import { FilterType, ProfileFilter, User } from 'types';
 
 import './filter.css';
+import 'components/main.css';
 
 const Filter = () => {
   const { appState, appDispatch } = useContext(AppContext);
-  const possibleFilters: FilterType[] = ['cloud', 'stars', 'heart', 'sun', 'male', 'female'];
+  const possibleFilters: FilterType[] = ['cloud', 'stars', 'spaceship', 'sun', 'heart', 'male', 'female'];
 
   const handleFilter = (e: any, filter: FilterType) => {
     e.target.checked
@@ -57,17 +58,17 @@ export const removeFilter = (payload: FilterType, state: AppState) => {
 
 export const generateFilters = (filters: FilterType[]): ProfileFilter[] => {
   const filterCollection = [];
-
   if (filters) {
     for (const filter of filters) {
       if (['male', 'female'].includes(filter)) {
         filterCollection.push((user: User) => user.gender === filter);
+      } else if (['heart'].includes(filter)) {
+        filterCollection.push((user: User) => (user.liked ? 'heart' : '') === filter);
       } else {
         filterCollection.push((user: User) => user.animation === filter);
       }
     }
   }
-
   return filterCollection;
 };
 

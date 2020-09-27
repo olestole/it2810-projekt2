@@ -1,9 +1,11 @@
 import React, { useContext } from 'react';
 import AppContext from '../../utils/AppContext';
 import '../GalleryTile/GalleryTile.css';
+import 'components/main.css';
 
 import { AnimationSVG } from '../../components/AnimationsSVG';
 import { PeopleSVG } from '../../components/AnimationsSVG';
+import { ReactComponent as Heart } from 'assets/SVG/heart.svg';
 
 import { User } from 'types';
 
@@ -23,12 +25,18 @@ const GalleryTile = ({ user }: GalleryTileProps) => {
       <div id={user.animation} className="svgAnimation">
         <AnimationSVG type={user.animation} />
       </div>
-      <div className="svgPeople">
-        <PeopleSVG type={user.picture} />
+      <div className="svgMainElements">
+        <div id="heart">{user.liked ? <Heart /> : null}</div>
+        <div id="people">
+          <PeopleSVG type={user.picture} />
+        </div>
       </div>
+
       <p className="svgText">{user.name}</p>
     </div>
   );
 };
+
+//      <div className="svgHeart">{user.liked ? <Heart type={'heart'} /> : null}</div>
 
 export default GalleryTile;

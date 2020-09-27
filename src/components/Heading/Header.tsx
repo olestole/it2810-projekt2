@@ -7,6 +7,7 @@ import Logo from 'assets/header/appLogo.svg';
 import Modal from 'react-modal';
 
 import './header.css';
+import 'components/main.css';
 
 const customStyles = {
   content: {
