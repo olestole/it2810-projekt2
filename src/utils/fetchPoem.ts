@@ -1,4 +1,3 @@
-import { IPoem } from 'types';
 import axios from 'axios';
 
 const baseURL = 'https://poetrydb.org/';

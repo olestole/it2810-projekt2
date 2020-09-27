@@ -13,6 +13,7 @@ const App = () => {
   useEffect(() => {
     console.log('Satt localStorage');
     localStorage.setItem('context', JSON.stringify(appState));
+    document.body.style.backgroundColor = appState.darkmode ? '#121212' : 'white';
   }, [appState]);
 
   return (

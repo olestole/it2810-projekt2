@@ -1,13 +1,11 @@
 import React, { useContext } from 'react';
-import AppContext from '../../utils/AppContext';
+import AppContext from 'utils/AppContext';
+import { AnimationSVG, PeopleSVG } from 'components/SVGComponents';
+import { ReactComponent as Heart } from 'assets/SVG/heart.svg';
+import { User } from 'types';
+
 import '../GalleryTile/GalleryTile.css';
 import 'components/main.css';
-
-import { AnimationSVG } from '../../components/AnimationsSVG';
-import { PeopleSVG } from '../../components/AnimationsSVG';
-import { ReactComponent as Heart } from 'assets/SVG/heart.svg';
-
-import { User } from 'types';
 
 interface GalleryTileProps {
   user: User;

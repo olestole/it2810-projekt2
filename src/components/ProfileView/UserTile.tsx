@@ -1,14 +1,13 @@
 import React, { useContext } from 'react';
 import AppContext from 'utils/AppContext';
 
-import { AnimationSVG } from 'components/AnimationsSVG';
-import { PeopleSVG } from 'components/AnimationsSVG';
+import { AnimationSVG } from 'components/SVGComponents';
+import { PeopleSVG } from 'components/SVGComponents';
 import { ReactComponent as Heart } from 'assets/SVG/heart.svg';
+import { User } from 'types';
 
 import './profile.css';
 import 'components/main.css';
-
-import { User } from 'types';
 
 interface UserTileProps {
   user: User;

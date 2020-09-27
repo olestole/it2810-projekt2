@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import AppContext from 'utils/AppContext';
-import { Poem } from 'components/Profile';
+import { Poem } from 'components/ProfileView';
 import song from 'utils/songsConverter';
 import { UserTile } from 'components/ProfileView';
 import LikeButton from 'components/ProfileView/LikeButton';
