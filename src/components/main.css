@@ -1,20 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap');
 
-body,
-html {
-  margin: 0;
-  padding: 0;
-  font-family: 'Work Sans', sans-serif;
-}
-
-body .light,
-.dark {
-  height: 100vh;
-  background: var(--background);
-  --background: var(--bgColor);
-  transition: var(--transition);
-}
-
 .header {
   position: sticky;
   display: flex;
@@ -97,7 +82,6 @@ body .light,
   --text-black: black;
   --bg-lightgrey: lightgrey;
   --transition: background 500ms ease-in-out, color 1000ms ease-in-out;
-  --background: #121212;
 }
 
 .dark {
@@ -112,4 +96,14 @@ body .light,
   --foreground: var(--bg-lightgrey);
   --text: var(--text-black);
   --background: #fff;
+}
+
+body,
+html {
+  margin: 0px;
+  padding: 0;
+  font-family: 'Work Sans', sans-serif;
+  background: var(--background);
+  --background: var(--background);
+  transition: var(--transition);
 }

@@ -1,5 +1,7 @@
 .darkmode {
   width: 36px;
+  margin-right: 1em;
+
   max-height: inherit;
   max-width: inherit;
 }
