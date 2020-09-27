@@ -1,9 +1,4 @@
-import React from 'react';
 import '@testing-library/jest-dom/extend-expect';
-import { mount, configure } from 'enzyme';
-import AppContextProvider from '../components/AppContextProvider';
-import App from '../components/App';
-import Adapter from 'enzyme-adapter-react-16';
 import { AppState } from 'utils/AppContext';
 import { User } from 'types';
 import { addFilter, removeFilter } from 'components/Filter';
