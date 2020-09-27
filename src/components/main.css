@@ -61,16 +61,13 @@ body .light,
 
   align-items: center;
   justify-content: center;
+  position: relative;
 
   transition: 0.1s;
   box-shadow: var(--box-shadow);
   border-radius: var(--borderRadius);
   background: var(--foreground);
   transition: var(--transition);
-}
-
-.profileContainer:hover {
-  transform: scale(1.02);
 }
 
 .poem {
