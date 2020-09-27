@@ -71,6 +71,23 @@
   color: var(--text);
 }
 
+#likeButton {
+  padding: 2% 2%;
+  border: none;
+  border-radius: 8px;
+  color: var(--text);
+  background: var(--foreground);
+  display: inline-block;
+  transition: var(--transition);
+}
+
+#likeButton:hover {
+  color: #ffffff;
+  background: #f05558;
+  border-color: #f05558;
+  transition: all 0.4s ease 0s;
+}
+
 :root {
   --borderRadius: 8px;
   --box-shadow: 0px 0px 10px 5px #00000020;

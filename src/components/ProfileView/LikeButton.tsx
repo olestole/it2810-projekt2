@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './likeButton.css';
+import 'components/main.css';
 
 interface Likefunction {
   like: () => void;
