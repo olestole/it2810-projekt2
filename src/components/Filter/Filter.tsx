@@ -58,7 +58,6 @@ export const removeFilter = (payload: FilterType, state: AppState) => {
 
 export const generateFilters = (filters: FilterType[]): ProfileFilter[] => {
   const filterCollection = [];
-  console.log(filters);
   if (filters) {
     for (const filter of filters) {
       if (['male', 'female'].includes(filter)) {
@@ -70,8 +69,6 @@ export const generateFilters = (filters: FilterType[]): ProfileFilter[] => {
       }
     }
   }
-  console.log(filterCollection);
-
   return filterCollection;
 };
 
