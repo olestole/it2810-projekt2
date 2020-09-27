@@ -33,6 +33,7 @@
   transition: 0.1s;
   box-shadow: var(--box-shadow);
   border-radius: var(--borderRadius);
+  transition: background 500ms ease-in-out, color 1000ms ease-in-out;
 }
 
 .poem p {
