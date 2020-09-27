@@ -20,7 +20,7 @@ const GalleryView = () => {
   };
 
   return (
-    <div>
+    <div className={appState.darkmode ? 'dark' : 'light'}>
       <Filter />
       <div className="gridContainer">{renderProfiles()}</div>
     </div>
