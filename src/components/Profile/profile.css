@@ -1,6 +1,7 @@
 #poemContainer {
   height: 100%;
   margin: 0 10% 0 10%;
+  background: background 500ms ease-in-out, color 1000ms ease-in-out;
 }
 
 #spinner {
@@ -35,4 +36,5 @@
 .mainContainer {
   width: 100%;
   height: 100%;
+  background: background 500ms ease-in-out, color 1000ms ease-in-out;
 }
