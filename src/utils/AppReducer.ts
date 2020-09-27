@@ -4,10 +4,6 @@ import { addFilter, removeFilter } from 'components/Filter';
 
 type appReducer = (prevState: AppState, action: AppAction) => AppState;
 
-const getUserIndex = (state: AppState, user: User) => {
-  return state.users.findIndex((stateUser: User) => stateUser === user);
-};
-
 const reducer: appReducer = (state: AppState, action: AppAction): AppState => {
   switch (action.type) {
     case 'setCurrentUser':
@@ -27,7 +23,7 @@ const reducer: appReducer = (state: AppState, action: AppAction): AppState => {
         users: usersCopy,
       };
     case 'likeUser':
-      const userI = state.users.findIndex((user: User) => user.name === action.targetUser);
+      const userI = state.users.findIndex((user: User) => user.name === action.targetUser.name);
       if (userI === -1) {
         console.log('COuldnt find index');
         return state;

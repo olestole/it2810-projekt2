@@ -44,6 +44,9 @@ const Heading = () => {
   };
 
   const handleChange = (e: any) => {
+    if (e.keyCode === 13) {
+      console.log('Halla');
+    }
     setUserName(e.target.value);
   };
 

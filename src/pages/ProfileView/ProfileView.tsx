@@ -2,18 +2,16 @@ import React, { useContext } from 'react';
 import AppContext from 'utils/AppContext';
 import { Poem } from 'components/Profile';
 import song from 'utils/songsConverter';
-import { GalleryTile } from 'components/GalleryTile';
-import { AiOutlineReload } from 'react-icons/ai';
-
-import './profileView.css';
 import { UserTile } from 'components/ProfileView';
 import LikeButton from 'components/ProfileView/LikeButton';
+
+import './profileView.css';
 
 const ProfileView = () => {
   const { appState, appDispatch } = useContext(AppContext);
 
   let likePerson = () => {
-    appDispatch({ type: 'likeUser', targetUser: appState.currentUser!.name });
+    appDispatch({ type: 'likeUser', targetUser: appState.currentUser! });
   };
 
   return (
