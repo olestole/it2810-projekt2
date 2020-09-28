@@ -104,7 +104,7 @@ In cases where screens get so small that the responsive layout isn’t enough, w
 Every SVG-image used in the app scales according to the screen size.
 
 ## Yarn 
-´Yarn´ was for a long time known to be way faster than ´npm´. Today that’s arguably a truth anymore, but the group members are more used to yarn, and chose this over `npm` for this project. The use of `npm` wouldn’t make any difference to the totality of the project.
+`Yarn` was for a long time known to be way faster than `npm`. Today that’s arguably a truth anymore, but the group members are more used to yarn, and chose this over `npm` for this project. The use of `npm` wouldn’t make any difference to the totality of the project.
 
 ## Use of git
 During our development we have described tasks usings issues in GitLab. Every commit was to be on the form “#issuenumber description”, where the issue number corresponds to the issue on GitLab and the description describing what was contributed. We developed using branches corresponding to one or more issues. The branches were then merged to master via merge requests, the merge requests were to be accepted by someone else on the team. 
@@ -126,7 +126,7 @@ The tests (and snapshot) can be found under the `src/tests/` folder. For testing
 We have added some additional files so that the tests would run. The files are `jest.config.js`, `babel.config.js`, `src/config/cssImportFix.js` and `src/__mocks__/svgrMock.js`. The tests wouldn’t run with css, svg and png files before we added the files. 
 
 Here are the pictures from testing the layout on Mac, Ipad and Iphone8. We have also tested on Iphone X, Iphone 8 Plus, Galaxy S5 and different computers.
-When it comes to browsers we have tested the app in Chrome, Safari, Firefox and Opera and it works the same way in all the browsers.
+When it comes to browsers we have tested the app in Chrome, Safari, Firefox and Opera and it works the same way in all the browsers and on all the devices.
 
 | PC - Galleryview                                                              | PC - Profileview                                                              |
 | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
