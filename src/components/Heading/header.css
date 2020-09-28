@@ -19,17 +19,6 @@
   cursor: pointer;
 }
 
-.header {
-  position: sticky;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  background: var(--foreground);
-  transition: var(--transition);
-  color: var(--text);
-}
-
 .headerInput {
   display: flex;
 }
@@ -41,7 +30,12 @@
 
 @media (max-width: 400px) {
   .tinderName {
-    font-size: 12px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 374px) {
+  .tinderName {
     display: none;
   }
 }
