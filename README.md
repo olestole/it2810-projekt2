@@ -39,7 +39,8 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Testing
 
-Here are the pictures from testing the layout on different devices
+Here are the pictures from testing the layout on Mac, Ipad and Iphone8. We have also tested on Iphone X, Iphone 8 Plus, Galaxy S5 and different computers.
+When it comes to browsers we have tested the app in Chrome, Safari, Firefox and Opera and it works the same way in all the browsers.
 
 | PC - Galleryview                                                     | PC - Profileview                                                     |
 | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
@@ -47,4 +48,8 @@ Here are the pictures from testing the layout on different devices
 | IPad - Galleryview - Flat                                            | IPad - Profileview - Flat                                            |
 | <img src="src/readMePictures/IpadFlatGallery.png" width="100%"/>     | <img src="src/readMePictures/IpadFlatProfile.png" width="100%"/>     |
 | IPad - Galleryview - Standing                                        | IPad - Profileview - Standing                                        |
-| <img src="src/readMePictures/IpadStandingGallery.png" width="100%"/> | <img src="src/readMePictures/IpadStandingProfile.png" width="100%"/> |
+| <img src="src/readMePictures/IpadStandingGallery.png" width="50%"/> | <img src="src/readMePictures/IpadStandingProfile.png" width="50%"/> |
+| IPhone8 - Galleryview - Flat                                          | IPhone8 - Profileview - Flat                                            |
+| <img src="src/readMePictures/IPhone8FlatGallery.PNG" width="100%"/>     | <img src="src/readMePictures/IPhone8FlatProfile.PNG" width="100%"/>     |
+| IPhone8 - Galleryview - Standing                                        | IPhone8 - Profileview - Standing                                        |
+| <img src="src/readMePictures/IPhone8StandingGallery.PNG" width="50%"/> | <img src="src/readMePictures/IPhone8StandingProfile.PNG" width="50%"/> |
