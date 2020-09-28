@@ -8,9 +8,28 @@ $ yarn			# Equivalent to npm install
 $ yarn start	        # Equivalent to npm run start
 ```
 
+### Run tests
+
+```
+$ yarn test
+```
+
+If you need new snapshots:
+
+```
+$ yarn test -u
+```
+
+### Run linter
+
+```
+$ yarn lint
+```
+
+
 ## Structure
 
-The app is modalized and divided into a structure fit for React.
+The app is modularized and divided into a structure fit for React.
 
 **/root**: The root of the project contains app-specific configuration. Configuration for e.g. formatter (`Prettier`) and linter (`ESLint`) are defined here.
 * **/src**: The source-code of the project <br/>
@@ -91,9 +110,13 @@ Every SVG-image used in the app scales according to the screen size.
 During our development we have described tasks usings issues in GitLab. Every commit was to be on the form “#issuenumber description”, where the issue number corresponds to the issue on GitLab and the description describing what was contributed. We developed using branches corresponding to one or more issues. The branches were then merged to master via merge requests, the merge requests were to be accepted by someone else on the team. 
 
 
-## Reusing of code
+## Reuse of code
+Some code snippets has been reused in order to quickly implement e.g. a `Spinner` for loading indication and `react-modal` for displaying a modal. 
+
 * https://codepen.io/Benedikte/pen/bIuGr
 * https://www.svgrepo.com/
+* https://loading.io/css/
+* https://www.npmjs.com/package/react-modal
 
 
 ## Testing
