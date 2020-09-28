@@ -41,8 +41,10 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 Here are the pictures from testing the layout on different devices
 
-**PC - Galleryview**
-![Alt text](src/readMePictures/pcGallery.png?raw=true 'PC Galleryview')
-
-**PC - Profileview**
-![Alt text](src/readMePictures/pcProfile.png =250px 'PC Profileview')
+| PC - Galleryview                                                     | PC - Profileview                                                     |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| <img src="src/readMePictures/pcGallery.png" width="100%"/>           | <img src="src/readMePictures/pcProfile.png" width="100%"/>           |
+| IPad - Galleryview - Flat                                            | IPad - Profileview - Flat                                            |
+| <img src="src/readMePictures/IpadFlatGallery.png" width="100%"/>     | <img src="src/readMePictures/IpadFlatProfile.png" width="100%"/>     |
+| IPad - Galleryview - Standing                                        | IPad - Profileview - Standing                                        |
+| <img src="src/readMePictures/IpadStandingGallery.png" width="100%"/> | <img src="src/readMePictures/IpadStandingProfile.png" width="100%"/> |
