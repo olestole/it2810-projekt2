@@ -19,12 +19,24 @@
   cursor: pointer;
 }
 
+.header {
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: var(--foreground);
+  transition: var(--transition);
+  color: var(--text);
+}
+
 .headerInput {
   display: flex;
 }
 
 .tinderName {
-  color: white;
+  color: var(--text);
+  transition: var(--transition);
 }
 
 @media (max-width: 400px) {
