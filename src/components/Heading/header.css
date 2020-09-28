@@ -24,7 +24,8 @@
 }
 
 .tinderName {
-  color: white;
+  color: var(--text);
+  transition: var(--transition);
 }
 
 @media (max-width: 400px) {

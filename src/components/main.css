@@ -99,7 +99,7 @@
   --bg-black: #121212;
   --bg-white: white;
   --text-black: black;
-  --bg-lightgrey: lightgrey;
+  --bg-lightgrey: #dee4e7;
   --transition: background 500ms ease-in-out, color 1000ms ease-in-out;
 }
 
