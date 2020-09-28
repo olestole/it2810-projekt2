@@ -84,7 +84,8 @@
 
 .profileText {
   position: absolute;
-  margin: 0 0 -35% 0;
+  bottom: 20%;
+  margin: 0 0 -10% 0;
   z-index: 3;
   font-size: 4em;
   font-weight: 500;
