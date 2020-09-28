@@ -43,3 +43,6 @@ Here are the pictures from testing the layout on different devices
 
 **PC - Galleryview**
 ![Alt text](src/readMePictures/pcGallery.png?raw=true 'PC Galleryview')
+
+**PC - Profileview**
+![Alt text](src/readMePictures/pcProfile.png =250px 'PC Profileview')
