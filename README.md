@@ -1,3 +1,5 @@
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.idi.ntnu.no/#https://gitlab.stud.idi.ntnu.no/it2810-h20/team-49/prosjekt2) 
+
 ## Run project
 In order to run the project you’ll need `yarn` (this is added in the gitpod project)
 
