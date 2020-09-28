@@ -35,6 +35,4 @@ const GalleryTile = ({ user }: GalleryTileProps) => {
   );
 };
 
-//      <div className="svgHeart">{user.liked ? <Heart type={'heart'} /> : null}</div>
-
 export default GalleryTile;
